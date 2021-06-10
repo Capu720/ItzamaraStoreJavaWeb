@@ -2,7 +2,7 @@
 
 Nuestro proyecto final para la materia de ADOO, una página web para la empresa Itzamara Store
 
-## Comenzando 
+## Comenzando 🚀
 
 Primero deberas descargar los archivos que se encuentran en este repositorio, una vez descargado, necesitaras lo siguiente.
 
@@ -17,3 +17,4 @@ Primero deberas descargar los archivos que se encuentran en este repositorio, un
 1. Comencemos abriendo la aplicación Apache Netbeans
 2. Hacemos click en el recuadro abrir y después abrir proyecto
 3. Seleccionamos la carpeta donde extraimos el repositorio
+4. Hacemos click en siguiente en todo lo que nos aparesca
