@@ -19,6 +19,9 @@
 </head>
 
 <body class="body-inicio-sesion">
+    <div class="nav-titulo-pagina-principal">
+        <a class="a-pagina-inicio" href="index.html"><strong>IZ</strong></a>
+    </div>
     <section class="text-start contact-clean" style="background: rgba(255,255,255,0);font-size: 16px;color: #2d2b2b;">
         <form class="needs-validation" action="UsuarioController?accion=login" method="POST" style="box-shadow: 0px 0px 5px 0px #bababa;border-radius: 21px;border-color: rgb(80, 94, 108);background: rgb(255, 255, 255);color: var(--bs-dark);" autocomplete="off" action="pagina-inicio.html" novalidate="">
             <h2 class="text-center" style="color: #2d2b2b;">Inicio de sesión</h2>
