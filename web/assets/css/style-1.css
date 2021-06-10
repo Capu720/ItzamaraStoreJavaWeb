@@ -101,7 +101,7 @@
     margin-bottom: 5%;
   }
   
-  .body-registroClt {
+  .body-form {
     font-family: 'Inconsolata', monospace;
     font-size: 20px;
   }
@@ -112,7 +112,7 @@
     float: left;
   }
   
-  .div-pt{
+  .centrado{
     position: absolute;
     left: 0;
     right: 0;
@@ -220,3 +220,31 @@
     right: 0;
     left: 0;
   }
+
+
+  /* Ganancias */
+
+  .form-ganancias{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    padding: 0;
+  }
+
+  .form-ganancias li{
+    list-style: none;
+  }
+
+  .form-ganancias .btn{
+    margin-top: 2em;
+  }
+
+  .campos{
+    margin: 2em;
+  }
+
+  .body-form .tabla-ventas{
+    font-size: 15px;
+    padding: 2%;
+  }
+
