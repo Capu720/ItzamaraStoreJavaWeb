@@ -6,13 +6,13 @@ Nuestro proyecto final para la materia de ADOO, una página web para la empresa 
 
 Primero deberas descargar los archivos que se encuentran en este repositorio, una vez descargado, necesitaras lo siguiente.
 
-## Pre-requisitos 
+## Pre-requisitos 📋
 
 1. Debes de contar con la aplicación Apache Netbeans
 2. Descargar el server Apache Tomcat 8.56 http://tomcat.apache.org
 3. Una vez descargado el RAR de este repositorio, deberas extraer los archivos en tu lugar de preferencia
 
-##Instalación
+## Instalación 🔧
 
 1. Comencemos abriendo la aplicación Apache Netbeans
 2. Hacemos click en el recuadro abrir y después abrir proyecto
