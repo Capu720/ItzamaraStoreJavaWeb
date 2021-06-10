@@ -245,13 +245,6 @@
 
   .body-form .tabla-ventas{
     font-size: 15px;
-  }
-
-  .ventas{
-    padding: 0% 2% 2% 2%;
-  }
-
-  .ventas p{
-    color: #e7abad;
+    padding: 2%;
   }
 
