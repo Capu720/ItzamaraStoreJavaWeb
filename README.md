@@ -2,6 +2,8 @@
 
 Nuestro proyecto final para la materia de ADOO, una página web para la empresa Itzamara Store
 
+[Accede a la documentación del documento](https://sites.google.com/view/itzamara-store/inicio)
+
 ## Comenzando 🚀
 
 Primero deberas descargar los archivos que se encuentran en este repositorio, una vez descargado, necesitaras lo siguiente.
