@@ -1,0 +1,95 @@
+/*
+    Colores
+    Oscuro - #2d2b2b
+    Rosa - #e7abad
+    Claro - #fef9fb
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Inconsolata', monospace;
+    font-size: 13px;
+    margin: 0;
+}
+
+h1{
+    margin: 0;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 30px;
+    color: #2d2b2b;
+    padding-left: 2%;
+    padding-bottom: 1%;
+}
+
+.encabezado{
+    padding-top: 2%;
+    border-bottom: 2px solid #e7abad;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#opciones{
+    margin: 1%;
+}
+
+#opciones ul {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+}
+
+.op{
+    display: inline-block;
+    height: 3ex;
+    vertical-align: middle;
+    font-size: 15px;
+    font-family: 'Inconsolata', monospace;
+}
+
+
+.btnOp:hover{
+    background-color: #fef9fb;
+    cursor: pointer;
+}
+
+
+#misClientes, #actualizar, #misCatalogos, #Crear{
+    padding: 3% 2% 0% 2%;
+}
+
+.iconos-tam{
+    margin-left: 20px;
+    height: 25px;
+    width: 25px;
+}
+
+#FC1{
+    margin-left: 15%;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+#FC2{
+    margin-left: 15%;
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+}
+#FC3{
+    margin-left: 15%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: flex-end;
+    width: 70%;
+}
+#btnRegresar{
+    margin-right: 1%;
+}
+
+/*Necesita un diseño responsivo*/
+
+

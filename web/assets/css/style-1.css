@@ -1,0 +1,222 @@
+.contact-clean {
+    background: #f1f7fc;
+    padding: 80px 0;
+  }
+  
+  @media (max-width:767px) {
+    .contact-clean {
+      padding: 20px 0;
+    }
+  }
+  
+  .contact-clean form {
+    max-width: 480px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 4px;
+    color: #505e6c;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+  }
+  
+  @media (max-width:767px) {
+    .contact-clean form {
+      padding: 30px;
+    }
+  }
+  
+  .contact-clean h2 {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 36px;
+    color: inherit;
+  }
+  
+  .contact-clean form .form-control {
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.05);
+    outline: none;
+    color: inherit;
+    padding-left: 12px;
+    height: 42px;
+  }
+  
+  .contact-clean form .form-control:focus {
+    border: 1px solid #b2b2b2;
+  }
+  
+  .contact-clean form textarea.form-control {
+    min-height: 100px;
+    max-height: 260px;
+    padding-top: 10px;
+    resize: vertical;
+  }
+  
+  .contact-clean form .btn {
+    padding: 16px 32px;
+    border: none;
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
+    opacity: 0.9;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    line-height: 1;
+    outline: none !important;
+  }
+  
+  .contact-clean form .btn:hover {
+    opacity: 1;
+  }
+  
+  .contact-clean form .btn:active {
+    transform: translateY(1px);
+  }
+  
+  .contact-clean form .btn-primary {
+    margin-top: 15px;
+    color: #fff;
+  }
+  
+  .body-inicio-sesion {
+    font-family: 'Inconsolata', monospace;
+    background-image: url('../../assets/img/iz-fondo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+  }
+  
+  .div-boton {
+    padding: 3%;
+  }
+  
+  .div-campo-txt {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  
+  .body-registroClt {
+    font-family: 'Inconsolata', monospace;
+    font-size: 20px;
+  }
+  
+  .div-txt {
+    box-sizing: border-box;
+    display: block;
+    float: left;
+  }
+  
+  .div-pt{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  
+  .div-form {
+    box-sizing: border-box;
+    display: block;
+  }
+  
+  .h1-titulo {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 30px;
+    color: #2d2b2b;
+    margin: 1%;
+    padding: 1%;
+    border-bottom: 2px solid #e7abad;
+  }
+  
+  .form-datos-rc {
+    padding: 1%;
+  }
+  
+  .div-datos {
+    margin: 2%;
+  }
+  
+  .select-bancos{
+    margin-left: 2%;
+  }
+  
+  .btn-rgC {
+    margin: 2%;
+  }
+  
+  .nav-titulo-pagina-principal{
+    padding: 1%;
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 150%;
+    background-color: #2d2b2b;
+  }
+  
+  .nav-titulo-pagina-principal a{
+    color: #fef9fb !important;
+    text-decoration: none;
+  }
+  
+  .nav-titulo-pagina-principal a:hover{
+    color: #e7abad !important;
+    text-decoration: none;
+  }
+
+.body-index {
+    background-image: url("../img/iz-fondo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    background-attachment: fixed;
+    font-family: 'Inconsolata', monospace;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  
+  .is-titulo {
+    color: #2d2b2b;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 400%;
+  }
+  
+  .div-titulo-is {
+    padding-top: 10%;
+    position: relative;
+  }
+  
+  .navbar a {
+    color: #fef9fb !important;
+  }
+  
+  .div-iniciar-sesion {
+    padding: 6%;
+    position: relative;
+    left: 0;
+    right: 0;
+  }
+  
+  .div-iniciar-sesion a {
+    color: #2b2d2d;
+    text-decoration: none !important;
+  }
+  
+  .div-iniciar-sesion a:hover {
+    color: black;
+  }
+  
+  .footer-p {
+    padding: 2%;
+    position: relative;
+    margin: auto;
+    float: none;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
