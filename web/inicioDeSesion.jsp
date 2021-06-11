@@ -10,15 +10,27 @@
 
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style-1.css">
+    <link rel="stylesheet" href="assets/css/style-navbar.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <script src="assets/js/inicioDeSesion.js" type="text/javascript"></script>
 </head>
 
 <body class="body-inicio-sesion">
-    <div class="nav-titulo-pagina-principal">
-        <a class="a-pagina-inicio" href="index.html"><strong>IZ</strong></a>
-    </div>
+    
+    <!-- Barra de navegación -->
+    <nav class="barraNav">
+        <div class="logo">
+            <a href="index.html">IZ</a>
+        </div>
+        
+        <div class="opciones">
+            <ul>
+            </ul>
+        </div>
+        <div></div>
+    </nav>
+
     <section class="text-start contact-clean" style="background: rgba(255,255,255,0);font-size: 16px;color: #2d2b2b;">
         <form id="form-InicioSesion" name="form-InicioSesion" class="needs-validation" action="UsuarioController?accion=login" method="POST" style="box-shadow: 0px 0px 5px 0px #bababa;border-radius: 21px;border-color: rgb(80, 94, 108);background: rgb(255, 255, 255);color: var(--bs-dark);" autocomplete="off" action="pagina-inicio.html" novalidate="">
             <h2 class="text-center" style="color: #2d2b2b;">Inicio de sesión</h2>
