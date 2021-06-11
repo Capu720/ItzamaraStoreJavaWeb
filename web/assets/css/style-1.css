@@ -263,3 +263,44 @@
   .texto-derecha{
     text-align: right;
   }
+
+  /* administradorPrincipal */
+
+  .menuAdmin{
+    padding: 3%;
+  }
+
+  .menuAdmin .tituloAdmin{
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
+  }
+
+  .tituloAdmin{
+    border-bottom: 1px solid #e7abad;
+  }
+
+  .menuAdmin .grid-tres-columnas{
+    text-align: center;
+  }
+
+  .menuAdmin .grid-tres-columnas li{
+    padding: 7%;
+  }
+
+  .opcionesAdmin{
+    padding: 5%;
+    font-family: 'Inconsolata', monospace;
+  }
+
+  .grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+  }
+
+  .grid div{
+    padding: 10px;
+    background-color: #ccc;
+
+  }
