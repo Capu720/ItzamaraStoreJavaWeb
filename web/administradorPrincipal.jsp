@@ -16,18 +16,18 @@
 
 <body>
     <!--Barra de navegación para la señorona, doña Cucha-->
-    <div class="barraNav">
+    <nav class="barraNav">
         <div class="logo">
             <a href="administradorPrincipal.jsp">IZ</a>
         </div>
         
         <div class="opciones">
             <ul>
-                <li><a id="idCerrarSesion" href="index.html">Cerrar sesión</a></li>
+                <li><a href="index.html">Cerrar sesión</a></li>
             </ul>
         </div>
         <div></div>
-    </div>
+    </nav>
 
     <!--Menú con las opciones para la poderosa e imponente doña cucha-->
     <div class="menuAdmin">

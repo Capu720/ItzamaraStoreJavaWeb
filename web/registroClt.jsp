@@ -9,7 +9,8 @@
     <title>Registro de clientes</title>
     
     <link rel="stylesheet" href="assets/css/style-1.css">
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <script src="assets/js/registroClt.js" type="text/javascript"></script>
 </head>
 
