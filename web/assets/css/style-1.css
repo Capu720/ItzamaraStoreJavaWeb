@@ -301,14 +301,32 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .grid div{
+  .grid .celda{
     padding: 1em;
     background-color: transparent;
     height: 5em;
+    border-radius: 10px;
+  }
+
+  .grid .celda a{
+    width: 100%;
+    height: 100%;
+    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+
+    background-color: #fef9fb;
+    color: #2b2d2d;
     border-radius: 10px;
+  }
+
+  .grid .celda a:hover{
+    /*background-color: #2b2d2d;
+    */
+    background-color: #2b2b2b;
+    color: #fef9fb;
   }

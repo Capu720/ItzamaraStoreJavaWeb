@@ -34,38 +34,14 @@
         <div class="tituloAdmin">
             <h1>Administrador</h1>
         </div>
-
         <div class="opcionesAdmin">
-
             <div class="grid">
-                <div>Conquistar el mundo</div>
-                <div>Vender tacos</div>
-                <div>item</div>
-                <div>item</div>
-                <div>item</div>
-                <div>item</div>
-                <div>item</div>
-                <div>item</div>
-                <div>item</div>  
+                <div class="celda"><a href="catalogos.jsp">Gestionar catálogos</a></div>
+                <div class="celda"><a href="Clientes.jsp">Gestionar clientes</a></div>
+                <div class="celda"><a href="catalogos.jsp">Gestionar productos</a></div>
+                <div class="celda"><a href="catalogos.jsp">Gestionar proveedores</a></div>
             </div>
         </div>
-
-        <!--<div class="opcionesAdmin">
-            <ul class="grid-tres-columnas">
-                <li><div style="background-color: red;">Cerrar sesión</div></li>
-                <li>Me llamo pedro</li>
-                <li>Josedo</li>
-            </ul>
-            <ul class="grid-tres-columnas">
-                <li>Cerrar sesión</li>
-                <li>Me llamo pedro</li>
-                <li>Josedo</li>
-            </ul>
-            <ul class="grid-tres-columnas">
-                <li>Cerrar sesión</li>
-                <li>cambiar</li>
-                <li>Josedo</li>
-            </ul>-->
     </div>
 </body>
 </html>
