@@ -46,9 +46,20 @@ public class UsuarioController extends HttpServlet {
             //int claveUsuario, String contra, String telefonoClt, String nombre, String apPat, String apMat, String correoClt
             Usuario usuario = new Usuario(0, contra, telefono, nombre, paterno, materno, correo);
             //Llamamos al metodo insertar
-            UsuarioDAO.insertar(usuario);
-            //Regresa al menu de inicio de sesion
-            dispatcher = request.getRequestDispatcher("inicioDeSesion.jsp");    
+            boolean bandera = UsuarioDAO.validarRegistro(usuario);
+            if(bandera == true)
+            {
+                Mensaje men = new Mensaje("Ese correo ya ha sido registrado. Intentelo con otro correo diferente", "Error");
+                men.mostrarMensaje();
+                dispatcher = request.getRequestDispatcher("registroClt.jsp");  
+            }
+            else{
+                UsuarioDAO.insertar(usuario);
+                Mensaje men = new Mensaje("Usuario registrado correctamente. Inicie sesion", "Listo");
+                men.mostrarMensaje();
+                //Regresa al menu de inicio de sesion
+                dispatcher = request.getRequestDispatcher("inicioDeSesion.jsp");  
+            }  
         }
         
         else if("login".equals(accion)){
@@ -62,7 +73,7 @@ public class UsuarioController extends HttpServlet {
                 String admin = UsuarioDAO.adminUsua(usuario);
                 
                 if("1".equals(admin)){//Es un administrador
-                    dispatcher = request.getRequestDispatcher("Clientes.jsp"); 
+                    dispatcher = request.getRequestDispatcher("administradorPrincipal.jsp"); 
                 }
                 else{//Es un cliente
                     dispatcher = request.getRequestDispatcher("index.html"); 
@@ -76,8 +87,6 @@ public class UsuarioController extends HttpServlet {
                 dispatcher = request.getRequestDispatcher("inicioDeSesion.jsp"); 
                 
             }
-            
-           
         }
         
         else{
