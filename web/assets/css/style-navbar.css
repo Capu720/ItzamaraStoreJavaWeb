@@ -17,14 +17,15 @@
 }
 
 .barraNav > .logo > a{
-    background-color: #2d2b2b;
-    color: #fef9fb !important;
+    /*background-color: #2d2b2b;*/
+    /*color: #fef9fb !important;*/
+    color: #2d2b2b;
     font-size: 2em;
     text-decoration: none;
 }
 
 .barraNav > .logo > a:hover{
-    background-color: black;
+    /*background-color: black;*/
     cursor: pointer;
 }
 
@@ -52,6 +53,5 @@
 
 .opciones li a:hover{
     cursor: pointer;
-    background-color: #2d2b2b;
-    color: #fef9fb !important;
+    color: black !important;
 }
