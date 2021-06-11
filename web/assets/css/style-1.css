@@ -299,12 +299,16 @@
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
-    text-align: center;
   }
 
   .grid div{
-    padding: 10px;
-    background-color: #ccc;
-    height: 4em;
-    text-align: center;
+    padding: 1em;
+    background-color: transparent;
+    height: 5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
   }
