@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet"/>
+
+    <script src="assets/js/ganancias.js" type="text/javascript"></script>
 </head>
 
 <body class="body-form">
@@ -21,14 +23,12 @@
     <div class="nav-titulo-pagina-principal">
         <a class="a-pagina-inicio" href="index.html"><strong>IZ</strong></a>
     </div>
-    <div>
-        <h1 class="h1-titulo">Ganancias</h1>
-    </div>
+    <h1 class="h1-titulo" id="ttlGanancias" name = "ttlGanancias">Ganancias</h1>
 
     <!--Formulario-->
-    <form class="needs-validation" autocomplete="off" novalidate="">
+    <form id="idDatos" name="idDatos" class="needs-validation" autocomplete="off" novalidate="">
         <div class="campos">
-            <ul class="form-ganancias">
+            <ul class="grid-tres-columnas">
                 <li>
                     <div class="col-7 centrado">
                         <label class="form-label">Fecha de inicio</label>
@@ -46,7 +46,7 @@
                     </div>                  
                 </li>
                 <li>
-                    <button class="btn btn-outline-dark" type="submit">Calcular ganancias</button>
+                    <button class="btn btn-outline-dark" id="btnCalcular" name="btnCalcular" type="submit">Calcular ganancias</button>
                 </li>
             </ul>
         </div>
@@ -54,6 +54,15 @@
 
     <!--Ventas y ganancias-->
     <section id="seccionVentas" name="seccionVentas" class="ventas">
+
+        <div class="campos">
+            <ul class="grid-tres-columnas">
+                <li id="idGanancias" name = "idGanancias">Ganancias: $ </li>
+                <li id="idIngresos" name = "idIngresos">Ingresos: $ </li>
+                <li id="idCostos" name = "idCostos">Costos: $ </li>
+            </ul>
+        </div>
+
         <p>Resumen de ventas</p>
         <div class="tabla-ventas">
             <table class="table table-hover" id="tVentas" name="tVentas">
@@ -82,10 +91,10 @@
                 </tr>
             </table>
         </div>
+        <div class="div-btn texto-derecha">
+            <button class="btn btn-outline-dark" onclick="location='ganancias.jsp'" type="submit">Regresar</button>
+        </div>
     </section>
-
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/validacion.js"></script>
 </body>
 </html>
