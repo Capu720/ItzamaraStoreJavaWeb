@@ -12,8 +12,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.script.ScriptEngineManager;
 import Administracion.UsuarioDAO;
 import Administracion.Usuario;
+import static java.lang.System.out;
+import Mensajes.Mensaje;
 
 @WebServlet(name = "UsuarioController", urlPatterns = {"/UsuarioController"})
 
@@ -53,7 +56,6 @@ public class UsuarioController extends HttpServlet {
             contra = request.getParameter("contra");
             Usuario usuario = new Usuario(0, contra, "", "", "", "", correo);
             boolean bandera = UsuarioDAO.login(usuario);
-            System.out.println("Bandera:"+bandera);
             
             if(bandera == true)//Encontro el registro y decie si es un admin o usuario 
             {
@@ -69,7 +71,10 @@ public class UsuarioController extends HttpServlet {
             }
             
             else{//No encontro el registro
+                Mensaje men =  new Mensaje("Usuario o password incorrectos. Intente de nuevo", "Error");
+                men.mostrarMensaje();
                 dispatcher = request.getRequestDispatcher("inicioDeSesion.jsp"); 
+                
             }
             
            
