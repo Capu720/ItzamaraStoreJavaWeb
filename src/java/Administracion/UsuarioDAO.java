@@ -40,7 +40,7 @@ public class UsuarioDAO {
         }
         
     }
-     
+      
      public boolean login(Usuario usuario){
      
         PreparedStatement ps;
@@ -84,8 +84,23 @@ public class UsuarioDAO {
             System.out.println(e.toString());
             return null;
         } 
-        
+     }
+    
+    public boolean validarRegistro(Usuario usuario){
      
+        PreparedStatement ps;
+        try{
+            String correo = usuario.getCorreoClt();
+            String comando = "select * from itzamaras.usuario where correo = '" + correo+"' ";
+            ps = conexion.prepareStatement(comando);
+            ResultSet rs = ps.executeQuery();
+            return rs.next();
+            
+            
+        }catch(SQLException e){
+            System.out.println(e.toString());
+            return false;
+        }
      
      }
 }
