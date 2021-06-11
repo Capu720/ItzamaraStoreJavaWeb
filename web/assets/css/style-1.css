@@ -224,18 +224,18 @@
 
   /* Ganancias */
 
-  .form-ganancias{
+  .grid-tres-columnas{
     display: grid;
     grid-template-columns: auto auto auto;
     width: 100%;
     padding: 0;
   }
 
-  .form-ganancias li{
+  .grid-tres-columnas li{
     list-style: none;
   }
 
-  .form-ganancias .btn{
+  .grid-tres-columnas .btn{
     margin-top: 2em;
   }
 
@@ -245,6 +245,21 @@
 
   .body-form .tabla-ventas{
     font-size: 15px;
+  }
+
+  .ventas{
+    padding: 0% 2% 2% 2%;
+    margin-top: 2em;
+  }
+
+  .ventas p{
+    color: #e7abad;
+  }
+
+  .div-btn{
     padding: 2%;
   }
 
+  .texto-derecha{
+    text-align: right;
+  }
