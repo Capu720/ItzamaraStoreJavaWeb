@@ -29,19 +29,19 @@
         <div class="col-6 div-txt">
             <div class="div-datos">
                 <label class="form-label">Nombre</label>
-                <input class="form-control" type="text" id="txtNombre" name="txtNombre" pattern="[A-Za-z ]{3,30}" required="" maxlength="30" minlength="3">
+                <input class="form-control" type="text" id="txtNombre" name="txtNombre" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]{3,30}" required="" maxlength="30" minlength="3">
                 <div class="valid-feedback"></div>
                 <div class="invalid-feedback"></div>
             </div>
             <div class="div-datos">
                 <label class="form-label">Apellido Paterno</label>
-                <input class="form-control" type="text" id="txtApPat" name="txtApPat" required="" maxlength="20" minlength="3" pattern="[A-Za-z]{3,20}">
+                <input class="form-control" type="text" id="txtApPat" name="txtApPat" required="" maxlength="20" minlength="3" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ]{3,20}">
                 <div class="valid-feedback"></div>
                 <div class="invalid-feedback"></div>
             </div>
             <div class="div-datos">
                 <label class="form-label">Apellido Materno</label>
-                <input class="form-control" type="text" id="txtApMat" name="txtApMat" minlength="3" maxlength="20" pattern="[A-Za-z]{3,20}" required="">
+                <input class="form-control" type="text" id="txtApMat" name="txtApMat" minlength="3" maxlength="20" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ]{3,20}" required="">
                 <div class="valid-feedback"></div>
                 <div class="invalid-feedback"></div>
             </div>

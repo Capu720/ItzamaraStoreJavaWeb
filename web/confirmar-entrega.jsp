@@ -35,8 +35,6 @@
             <button class="btn btn-outline-dark btn-rgC" type="submit">Registrar datos</button>
         </div>
     </form>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/validacion.js"></script>
 </body>
 </html>

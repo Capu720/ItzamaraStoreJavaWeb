@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="assets/js/pago-transferencia.js" type="text/javascript"></script>
 </head>
 
 <body class="body-form">
@@ -23,7 +25,7 @@
     <div>
         <h1 class="h1-titulo">Registro de pago por transferencia</h1>
     </div>
-    <form class="needs-validation" autocomplete="off" novalidate="">
+    <form class="needs-validation" id="form-pago" name="form-pago" autocomplete="off" novalidate="">
         <div class="col-6 centrado">
             <div class="div-datos">
                 <label class="form-label">Clave de rastreo</label>
@@ -32,10 +34,11 @@
                 <div class="invalid-feedback"></div>
             </div>
 
+            <!-- Esto se saca de la base Chorly-->
             <div class="div-datos">
                 <label class="form-label">Banco</label>
-                <select id="txtBanco" name="txtBanco" class="form-select" aria-label="Default select example">
-                    <option selected>Selecciona un banco</option>
+                <select id="txtBanco" name="txtBanco" class="form-select" aria-label="Default select example" required>
+                    <option disabled selected></option>
                     <option value="1">Banorte</option>
                     <option value="2">Banamex</option>
                     <option value="3">Santander</option>
@@ -43,11 +46,9 @@
             </div>
         </div>
         <div class="text-center">
-            <button class="btn btn-outline-dark btn-rgC" type="submit">Registrar datos</button>
+            <button class="btn btn-outline-dark btn-rgC" id="btnRegistrar" name="btnRegistrar" type="submit">Registrar datos</button>
         </div>
     </form>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/validacion.js"></script>
 </body>
 </html>
