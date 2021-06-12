@@ -295,20 +295,20 @@
     font-family: 'Inconsolata', monospace;
   }
 
-  .grid {
+  .matriz {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .grid .celda{
+  .matriz .celda{
     padding: 1em;
     background-color: transparent;
     height: 5em;
     border-radius: 10px;
   }
 
-  .grid .celda a{
+  .matriz .celda a{
     width: 100%;
     height: 100%;
 
@@ -324,7 +324,14 @@
     border-radius: 10px;
   }
 
-  .grid .celda a:hover{
+  .matriz .celda a:hover{
     background-color: #e7abad;
     color: #fef9fb;
+  }
+
+
+  /* Acerca de */
+
+  .sin-margen{
+    margin: 0;
   }

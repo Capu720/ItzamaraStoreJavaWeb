@@ -8,13 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Página principal de administrador</title>
 
-    <link rel="stylesheet" href="assets/css/style-1.css">
     <link rel="stylesheet" href="assets/css/style-navbar.css">
+    <link rel="stylesheet" href="assets/css/style-1.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 </head>
 
-<body>
+<body class="sin-margen">
     <!--Barra de navegación para la señorona, doña Cucha-->
     <nav class="barraNav">
         <div class="logo">
@@ -35,7 +35,7 @@
             <h1>Administrador</h1>
         </div>
         <div class="opcionesAdmin">
-            <div class="grid">
+            <div class="matriz">
                 <div class="celda"><a href="catalogos.jsp">Gestionar catálogos</a></div>
                 <div class="celda"><a href="Clientes.jsp">Gestionar clientes</a></div>
                 <div class="celda"><a href="">Gestionar productos</a></div>
