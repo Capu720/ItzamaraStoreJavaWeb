@@ -36,10 +36,11 @@
         </div>
         <div class="opcionesAdmin">
             <div class="matriz">
+                <div class="celda"><a href="ganancias.jsp">Ganancias</a></div>
                 <div class="celda"><a href="catalogos.jsp">Gestionar catálogos</a></div>
                 <div class="celda"><a href="Clientes.jsp">Gestionar clientes</a></div>
-                <div class="celda"><a href="">Gestionar productos</a></div>
-                <div class="celda"><a href="">Gestionar proveedores</a></div>
+                <div class="celda"><a href="productos.jsp">Gestionar productos</a></div>
+                <div class="celda"><a href="proveedores.jsp">Gestionar proveedores</a></div>
                 <div class="celda"><a href="">Ventas</a></div>
             </div>
         </div>

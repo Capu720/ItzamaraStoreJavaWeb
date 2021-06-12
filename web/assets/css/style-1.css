@@ -168,7 +168,7 @@
   }
   
   .nav-titulo-pagina-principal a:hover{
-    color: #e7abad !important;
+    color: #fef9fb !important;
     text-decoration: none;
   }
 
@@ -338,5 +338,49 @@
   }
 
   .informacion{
-    padding: 5em;
+    padding: 2em 3em 4em 4em;
   }
+
+  #linkAcerca{
+    color: #e7abad !important;
+  }
+
+  .informacion .matriz div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .encabezadoAcerca{
+    grid-column: 1 / 4;
+    grid-row: 1;
+    padding: 0.5em;
+  }
+
+  .celdaAcerca{
+    background-color: whitesmoke;
+    /*border-radius: 15px;*/
+  }
+
+  .redesSociales{
+    grid-column: 1 / 4;
+    grid-row: 3;
+    background-color: orange;
+  }
+
+  .encabezadoAcerca h1{
+    font-family: 'Julius Sans One', sans-serif;
+    border-bottom: 1px solid #e7abad;
+  }
+
+  .encabezadoAcerca p{
+    padding: 2em 3em 0em 3em;
+    text-align: justify;
+    display: block;
+    font-family: 'Inconsolata', monospace;
+  }
+
+  
+
