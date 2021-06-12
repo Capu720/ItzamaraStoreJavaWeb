@@ -23,7 +23,7 @@ function mostrar(i) {
             document.getElementById("misProductos").style.display = "block";
             document.getElementById("Crear").style.display = "none";
             document.getElementById("actualizaProducto").style.display = "none";
-            document.getElementById("op1").style.color =  "#e7abad";
+            document.getElementById("op1").style.color =  "#ff848a";
             document.getElementById("op2").style.color =  "#2d2b2b";
             break;
         case 2:
@@ -31,7 +31,7 @@ function mostrar(i) {
             document.getElementById("Crear").style.display = "block";
             document.getElementById("actualizaProducto").style.display = "none";
             document.getElementById("op1").style.color =  "#2d2b2b";
-            document.getElementById("op2").style.color =  "#e7abad";
+            document.getElementById("op2").style.color =  "#ff848a";
             break;
     }
 }

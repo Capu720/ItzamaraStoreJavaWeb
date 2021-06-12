@@ -1,7 +1,7 @@
 /*
     Colores
     Oscuro - #2d2b2b
-    Rosa - #e7abad
+    Rosa - #ff848a
     Claro - #fef9fb
 */
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
@@ -23,7 +23,7 @@ h1{
 
 .encabezado{
     padding-top: 2%;
-    border-bottom: 2px solid #e7abad;
+    border-bottom: 2px solid #ff848a;
     margin-left: 2%;
     margin-right: 2%;
 }

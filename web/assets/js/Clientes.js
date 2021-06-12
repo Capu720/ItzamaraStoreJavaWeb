@@ -19,14 +19,14 @@ function mostrar(i) {
         case 1:
             document.getElementById("misClientes").style.display = "block";
             document.getElementById("actualizar").style.display = "none";
-            document.getElementById("op1").style.color =  "#e7abad";
+            document.getElementById("op1").style.color =  "#ff848a";
             document.getElementById("op2").style.color =  "#2d2b2b";
             break;
         case 2:
             document.getElementById("misClientes").style.display = "none";
             document.getElementById("actualizar").style.display = "block";
             document.getElementById("op1").style.color =  "#2d2b2b";
-            document.getElementById("op2").style.color =  "#e7abad";
+            document.getElementById("op2").style.color =  "#ff848a";
             break;
     }
 }
