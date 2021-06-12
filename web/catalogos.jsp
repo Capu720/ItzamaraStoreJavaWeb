@@ -103,7 +103,7 @@
         </table>
         <br><br>
         <div id="FC3">
-            <button type="submit" class="btn btn-outline-dark" id="btnRegresar">Regresar</button>
+            <button type="button" class="btn btn-outline-dark" id="btnRegresar">Regresar</button>
         </div>
         <br><br>
     </div>
@@ -126,8 +126,6 @@
         </form> 
     </div>
     <script src="assets/js/validacion.js"></script>
-    <div id="agregarProductos">
 
-    </div>
 </body>
 </html>

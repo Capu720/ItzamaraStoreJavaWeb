@@ -80,6 +80,21 @@ h1{
     justify-content: space-between;
     width: 70%;
 }
+
+/*Utilizado en productos.html */
+#FC1-1{
+    display: flex;
+}
+
+#FC1-1 div{
+    margin-right: 2%;
+}
+
+.espacio{
+    height: 20px;
+}
+
+/**/
 #FC2{
     margin-left: 15%;
     margin-top: 3%;
@@ -100,6 +115,33 @@ h1{
 
 .pink{
     color: #e7abad;
+}
+
+
+#seccion-AP{
+    width: 100%;
+}
+
+#campos{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+#camposCrear{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 17%;
+}
+
+#foto{
+    display: inline;
+    float: left;
+    width: 30%;
+}
+#foto img {
+    height: 80%;
+    width:  80%;
 }
 /*Necesita un diseño responsivo*/
 

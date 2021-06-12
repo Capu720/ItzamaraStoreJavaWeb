@@ -46,10 +46,7 @@ function regresar(){
 
 function crear() {
     form = document.getElementById("idCrear");
-    if (!form.checkValidity()) {
-        alert("Llenar todos los campos correctamente");
-    }
-    else{
+    if (form.checkValidity()) {
         alert("Catálogo agregado");
     }
 }

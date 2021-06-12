@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="assets/css/styles-2.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
-    <script src="assets/js/Clientes.js" type="text/javascript"></script>
+    <script src="assets/js/clientes.js" type="text/javascript"></script>
 </head>
 <body>
     <div class="encabezado">
@@ -66,8 +66,6 @@
                 <div>
                     <label for="lClave">Clave</label>
                     <input type="text" class="form-control" id="tClave" required="required" readonly="readonly">
-                    <div class="valid-feedback"></div>
-                    <div class="invalid-feedback"></div>
                 </div> 
                 <div>
                     <label for="lNombre">Nombre</label>
