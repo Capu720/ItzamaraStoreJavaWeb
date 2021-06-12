@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Julius+Sans+One&display=swap');
 
+body{
+  margin: 0 !important;
+}
+
+.body-acerca{
+  overflow-y: hidden;
+}
+
 .contact-clean {
     background: #f1f7fc;
     padding: 80px 0;
@@ -338,14 +346,15 @@
   }
 
   .informacion{
-    padding: 2em 3em 4em 4em;
+    padding: 1em 4em 4em 4em;
   }
 
-  #linkAcerca{
-    color: #e7abad !important;
+  #linkAcerca, #linkContacto{
+    /*color: #fa969b !important;*/
+    color: #ff848a !important;
   }
 
-  .informacion .matriz div{
+  .informacion .matriz .encabezadoAcerca{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -359,20 +368,39 @@
     padding: 0.5em;
   }
 
-  .celdaAcerca{
-    background-color: whitesmoke;
-    /*border-radius: 15px;*/
+  .encabezadoContacto{
+    grid-column: 1 / 3;
+    grid-row: 1;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 
-  .redesSociales{
+  .divisionTresCeldas{
+    background-color: whitesmoke;
     grid-column: 1 / 4;
-    grid-row: 3;
-    background-color: orange;
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+  }
+  .celdaAcerca{
+    padding: 1em 1em 1em 2em;
+    border-radius: 15px;
   }
 
   .encabezadoAcerca h1{
     font-family: 'Julius Sans One', sans-serif;
-    border-bottom: 1px solid #e7abad;
+    border-bottom: 1px solid #ff989d;
+  }
+
+  .encabezadoContacto h1{
+    font-family: 'Julius Sans One', sans-serif;
+    border-bottom: 1px solid #ff989d;
   }
 
   .encabezadoAcerca p{
@@ -382,5 +410,56 @@
     font-family: 'Inconsolata', monospace;
   }
 
-  
+  .celdaAcerca .imagen{
+    height: 30%;
+  }
 
+  .celdaAcerca div{
+    height: 70%;
+    padding: 1em 1em 1em 0em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  /*ff848a*/
+  .imagen-acerca{
+    width: 50px;
+    height: 50px;
+  }
+
+  .celdaAcerca .texto p{
+    text-align: justify;
+    padding-top: 0.5em;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 200;
+    color: #2b2d2d;
+  }
+
+  .imagenRedSocial{
+    width: 40px;
+    height: 40px;
+  }
+
+  .redesSociales{
+    grid-column: 1 / 4;
+    grid-row: 3;
+    background-color: orange;
+    padding: 0.5em 40% 0.5em 40%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Contacto */
+
+  .matriz-dos-columnas{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+  }
