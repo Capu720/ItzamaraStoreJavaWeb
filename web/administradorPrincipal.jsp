@@ -38,10 +38,9 @@
             <div class="grid">
                 <div class="celda"><a href="catalogos.jsp">Gestionar catálogos</a></div>
                 <div class="celda"><a href="Clientes.jsp">Gestionar clientes</a></div>
-                <div class="celda"><a href="catalogos.jsp">Gestionar productos</a></div>
-                <div class="celda"><a href="catalogos.jsp">Gestionar proveedores</a></div>
-                <div class="celda"><a href="catalogos.jsp">Ventas</a></div>
-                <div class="celda"><a href="catalogos.jsp">Confirmar entrega</a></div>
+                <div class="celda"><a href="">Gestionar productos</a></div>
+                <div class="celda"><a href="">Gestionar proveedores</a></div>
+                <div class="celda"><a href="">Ventas</a></div>
             </div>
         </div>
     </div>

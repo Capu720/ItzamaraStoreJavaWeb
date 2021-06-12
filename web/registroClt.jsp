@@ -9,27 +9,18 @@
     <title>Registro de clientes</title>
     
     <link rel="stylesheet" href="assets/css/style-1.css">
-    <link rel="stylesheet" href="assets/css/style-navbar.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <script src="assets/js/registroClt.js" type="text/javascript"></script>
 </head>
 
 <body class="body-registroClt">
-    
-    <!-- Barra de navegación -->
-    <nav class="barraNav">
-        <div class="logo">
-            <a href="index.html">IZ</a>
-        </div>
-        
-        <div class="opciones">
-            <ul>
-            </ul>
-        </div>
-        <div></div>
-    </nav>
 
+    <!-- Barra de navegación simple-->
+    <div class="nav-titulo-pagina-principal">
+        <a class="a-pagina-inicio" href="index.html"><strong>IZ</strong></a>
+    </div>
+    
     <div>
         <h1 class="h1-titulo">Registrarme en itzamara store</h1>
     </div>
