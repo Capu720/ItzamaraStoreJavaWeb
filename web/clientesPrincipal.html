@@ -7,7 +7,8 @@
     <title>Clientes</title>
 
     <link rel="stylesheet" href="assets/css/style-navbar.css">
-    <link rel="stylesheet" href="styles-productos.css">
+    <link rel="stylesheet" href="assets/css/styles-productos.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 </head>
@@ -22,13 +23,87 @@
         <div class="opciones">
             <ul>
                 <li><a href="compras.html">Mis compras</a></li>
-                <li><a href="carrito.html"><img src=""></a></li>
                 <li><a href="index.html">Cerrar sesión</a></li>
+                <li><a href="carrito.html"><img src="assets/Iconos/carrito-de-compras-negro.png" class="tamIconos"></a></li>
             </ul>
         </div>
     </nav>
+    <div class="seccionCompras">
+    <!-- Aki va lo del list-->
 
-    <div>
+        <form action="">
+            <div class="filtro">
+                <label class="form-label">Tiendas</label>
+                <select id="txtTiendas" name="txtTiendas" class="form-select" aria-label="Default select example" required>
+                    <option value="1">Natura</option>
+                    <option value="2">Tupperware</option>
+                    <option value="3">Mary Kay</option>
+                    <option value="4">Calvin Klein</option>
+                    <option value="5">Sephora</option>
+                    <option selected value="6">Ezzy Ac</option>
+                </select>   
+            </div>
+        </form>
+
+        <div class="productos">
+            <!-- Un producto -->
+            <div class="producto">
+                <div class="imagenProdContenedor">
+                    <img class="imagenProd" src="assets/img/Productos/aretes_caras.jpg" />
+                </div>
+                <div class="infoProducto">
+                    <p class="nombreProd">Aretes morados</p>
+                    <p class="descripcionProd">Aretes de oro con piedras color amatista</p> 
+                    <div class="precio-agregar">
+                        <p>$200</p>
+                        <img src="assets/Iconos/anadir.svg" class="tamIconos">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="producto">
+                <div class="imagenProdContenedor">
+                    <img class="imagenProd" src="assets/img/Productos/anillo_rosa.jpg" />
+                </div>
+                <div class="infoProducto">
+                    <p class="nombreProd">Aretes morados</p>
+                    <p class="descripcionProd">Aretes de oro con piedras color amatista</p> 
+                    <div class="precio-agregar">
+                        <p>$200</p>
+                        <img src="assets/Iconos/anadir.svg" class="tamIconos">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="producto">
+                <div class="imagenProdContenedor">
+                    <img class="imagenProd" src="assets/img/Productos/aretes_rayos.jpg" />
+                </div>
+                <div class="infoProducto">
+                    <p class="nombreProd">Aretes morados</p>
+                    <p class="descripcionProd">Aretes de oro con piedras color amatista</p> 
+                    <div class="precio-agregar">
+                        <p>$200</p>
+                        <img src="assets/Iconos/anadir.svg" class="tamIconos">
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="imagenProdContenedor">
+                    <img class="imagenProd" src="assets/img/Productos/pulsera_letras.jpg" />
+                </div>
+                <div class="infoProducto">
+                    <p class="nombreProd">Pulsera de letras</p>
+                    <p class="descripcionProd">Pulseras de oro con letras de plástico</p> 
+                    <div class="precio-agregar">
+                        <p>$200</p>
+                        <img src="assets/Iconos/anadir.svg" class="tamIconos">
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
     

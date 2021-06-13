@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
 .barraNav{
@@ -66,5 +67,5 @@
 
 .opciones li a:hover{
     cursor: pointer;
-    color: black !important;
+    color: #ff848a !important;
 }
