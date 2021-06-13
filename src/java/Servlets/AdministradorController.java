@@ -20,7 +20,7 @@ import Mensajes.Mensaje;
 
 @WebServlet(name = "AdministradorController", urlPatterns = {"/AdministradorController"})
 
-public class AdministracionController extends HttpServlet {
+public class AdministradorController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
