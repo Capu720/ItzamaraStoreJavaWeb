@@ -15,6 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 import Administracion.ClienteDAO;
 import Administracion.Cliente;
 import Administracion.Proveedor;
+import Administracion.ProveedorDAO;
+import Mensajes.Mensaje;
 
 @WebServlet(name = "AdministradorController", urlPatterns = {"/AdministradorController"})
 
@@ -24,6 +26,7 @@ public class AdministracionController extends HttpServlet {
         
         //Llamamos  a la clsae e instanciamos los objetos que tiene el administrador
         ClienteDAO clienteDAO =  new ClienteDAO();
+        ProveedorDAO ProveedorDAO = new ProveedorDAO();
         String accion,nombre,paterno,materno,correo,telefono,contra;
         RequestDispatcher dispatcher = null;
         
@@ -31,21 +34,54 @@ public class AdministracionController extends HttpServlet {
         
         //Jugamos con los valores que puede tener accion o basicamente lo que puede hacer el usuario
         //Mostramos todos los datos
-        if(accion == null || accion.isEmpty()){
-            //Cargamos la pagina de clientes con todos los que haya para eso la lista
-           dispatcher = request.getRequestDispatcher("Clientes.jsp");
-           List<Cliente> listaclientes = clienteDAO.listaClientes();
-           request.setAttribute("lista", listaclientes);
-        }
         
-        
-        else if("verClientes".equals(accion)){
+        if("verClientes".equals(accion)){
            //Cargamos la pagina de clientes con todos los que haya para eso la lista
            dispatcher = request.getRequestDispatcher("Clientes.jsp");
            List<Cliente> listaclientes = clienteDAO.listaClientes();
            request.setAttribute("lista", listaclientes);
        }
-     
+        
+        else if("verProveedores".equals(accion)){
+            dispatcher = request.getRequestDispatcher("proveedores.jsp");
+            List<Proveedor> listaProveedores = ProveedorDAO.listaProveedores();
+            request.setAttribute("lista", listaProveedores);
+        }
+        
+        else if("modificarProveedor".equals(accion)){
+            dispatcher = request.getRequestDispatcher("actualiProveedores.jsp");
+            int id = Integer.parseInt(request.getParameter("claveProv"));
+            Proveedor proveedor = ProveedorDAO.selProve(id);
+            request.setAttribute("prove", proveedor);
+        
+        }
+                
+        else if("eliminarProvedor".equals(accion)){
+        
+            String id = request.getParameter("claveProv");
+            ProveedorDAO.eliminarProveedor(id);
+            System.out.println("Elimado exitosamente");
+            dispatcher = request.getRequestDispatcher("proveedores.jsp");
+            List<Proveedor> listaProveedores = ProveedorDAO.listaProveedores();
+            request.setAttribute("lista", listaProveedores);
+        }
+        
+        else if("crearProveedor".equals(accion)){
+            int clave = Integer.parseInt(request.getParameter("tcClave"));
+            nombre = request.getParameter("tcNombre");
+            telefono = request.getParameter("tcTelefono");
+            
+            Proveedor proveedor = new Proveedor(clave, telefono, nombre);
+            ProveedorDAO.insertarProveedor(proveedor);
+            dispatcher = request.getRequestDispatcher("proveedores.jsp");
+            List<Proveedor> listaProveedores = ProveedorDAO.listaProveedores();
+            request.setAttribute("lista", listaProveedores);
+        }
+        
+        else{
+            dispatcher = request.getRequestDispatcher("administradorPrincipal.jsp");  
+        }
+        
         dispatcher.forward(request, response);
     
     }

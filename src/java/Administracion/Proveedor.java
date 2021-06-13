@@ -5,14 +5,13 @@ package Administracion;
  * @author Equipo 1 Bambi&Fork
  */
 public class Proveedor {
-    private int claveProv, telefonoProv;
-    private String nombreProv, correoProv;
+    private int claveProv;
+    private String nombreProv, telefonoProv;
     
-    public Proveedor(int claveProv, int telefonoProv, String nombreProv, String correoProv){
+    public Proveedor(int claveProv, String telefonoProv, String nombreProv){
         this.claveProv = claveProv;
         this.telefonoProv = telefonoProv;
-        this.nombreProv = nombreProv;
-        this.correoProv = correoProv;
+        this.nombreProv = nombreProv; 
     }
 
     public int getClaveProv() {
@@ -23,11 +22,11 @@ public class Proveedor {
         this.claveProv = claveProv;
     }
 
-    public int getTelefonoProv() {
+    public String getTelefonoProv() {
         return telefonoProv;
     }
 
-    public void setTelefonoProv(int telefonoProv) {
+    public void setTelefonoProv(String telefonoProv) {
         this.telefonoProv = telefonoProv;
     }
 
@@ -39,12 +38,5 @@ public class Proveedor {
         this.nombreProv = nombreProv;
     }
 
-    public String getCorreoProv() {
-        return correoProv;
-    }
-
-    public void setCorreoProv(String correoProv) {
-        this.correoProv = correoProv;
-    }
     
 }

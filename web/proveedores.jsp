@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,37 +36,35 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Natura</td>
-                    <td>5546204920</td>
-                    <td><a><img src="assets/Iconos/actualizar.svg" class="iconos-tam" name="actualizaProveedor"></a></td>
-                    <td><a href=""><img src="assets/Iconos/eliminar.svg" class="iconos-tam"></a></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Ezzy Ac</td>
-                    <td>5567902023</td>
-                    <td><a><img src="assets/Iconos/actualizar.svg" class="iconos-tam" name="actualizaProveedor"></a></td>
-                    <td><a href=""><img src="assets/Iconos/eliminar.svg" class="iconos-tam"></a></td>
-                </tr>
+                <!--var es el objeto item el mismo que los controllers --!>
+                 <c:forEach var="prove" items="${lista}">
+                     <!--Es a la clase principal donde declaramos atributos getter y setters-->                  
+                     <tr>  
+                        <td><c:out value="${prove.claveProv}"/></td>
+                        <td><c:out value="${prove.nombreProv}"/></td>
+                        <td><c:out value="${prove.telefonoProv}"/></td>
+                        <td><a href="AdministradorController?accion=modificarProveedor&claveProv=<c:out value="${prove.claveProv}"/>"><img src="assets/Iconos/actualizar.svg" class="iconos-tam"></a></td>
+                        <td><a href="AdministradorController?accion=eliminarProvedor&claveProv=<c:out value="${prove.claveProv}"/>""><img src="assets/Iconos/eliminar.svg" class="iconos-tam"></a></td>
+                     </tr>
+                </c:forEach>
+                
             </tbody>
         </table>
     </div>
     <div id="actualizaProveedor" class="seccion">
-        <form class="needs-validation" autocomplete="off" novalidate="" id="idActualizar">
+        <form class="needs-validation" autocomplete="off" novalidate="" id="idActualizar" action="AdministradorController?accion=actuaProveedor">
             <div id="FC1">
                 <div>
                     <label for="lClave">Clave</label>
-                    <input type="text" class="form-control" id="taClave" required="required" readonly="readonly">
+                    <input type="text" class="form-control" id="taClave" name="taClave" required="required" readonly="readonly" value="<c:out value="${prove.claveProv}"/>">
                 </div> 
                 <div>
                     <label for="lNombre">Nombre</label>
-                    <input type="text" class="form-control" id="taNombre"  required>
+                    <input type="text" class="form-control" id="taNombre" name="taNombre" required value="<c:out value="${prove.nombreProv}"/>">
                 </div>  
                 <div>
                     <label for="lTelefono">Telefono</label>
-                    <input type="text" class="form-control" id="taTelefono"  required>
+                    <input type="text" class="form-control" id="taTelefono" name="taTelefono" required value="<c:out value="${prove.telefonoProv}"/>" >
                 </div>        
             </div>
             <br>
@@ -77,19 +76,19 @@
     </div>
     <div id="Crear" class="seccion">
         <!--Formulario de bootstrap-->
-        <form class="needs-validation" autocomplete="off" novalidate="" id="idCrear">
+        <form class="needs-validation" autocomplete="off" novalidate="" id="idCrear" action="AdministradorController?accion=crearProveedor">
             <div id="FC1">
                 <div>
                     <label for="lClave">Clave</label>
-                    <input type="text" class="form-control" id="tcClave" required>
+                    <input type="text" class="form-control" id="tcClave" name="tcClave" required>
                 </div> 
                 <div>
                     <label for="lNombre">Nombre</label>
-                    <input type="text" class="form-control" id="tcNombre"  required>
+                    <input type="text" class="form-control" id="tcNombre"  name="tcClave" required>
                 </div>  
                 <div>
                     <label for="lTelefono">Telefono</label>
-                    <input type="text" class="form-control" id="tcTelefono"  required>
+                    <input type="text" class="form-control" id="tcTelefono" name="tcTelefono" required>
                 </div>        
             </div>
             <div id="FC3">
