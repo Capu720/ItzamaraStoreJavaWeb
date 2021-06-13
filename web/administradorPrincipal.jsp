@@ -39,7 +39,7 @@
                 <div class="celda"><a href="ganancias.jsp">Ganancias</a></div>
                 <div class="celda"><a href="catalogos.jsp">Gestionar catálogos</a></div>
                 <div class="celda"><a href="AdministradorController?accion=verClientes">Gestionar clientes</a></div>
-                <div class="celda"><a href="productos.jsp">Gestionar productos</a></div>
+                <div class="celda"><a href="AdministradorController?accion=verProductos">Gestionar productos</a></div>
                 <div class="celda"><a href="AdministradorController?accion=verProveedores">Gestionar proveedores</a></div>
                 <div class="celda"><a href="">Ventas</a></div>
             </div>

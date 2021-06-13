@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proveedores</title>
+    <title>Productos</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/styles-2.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -38,16 +39,19 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>BB Cream</td>
-                    <td>Esta BB cream uniformiza el tono de la piel, protege e hidrata.</td>
-                    <td>153</td>
-                    <td>200</td>
-                    <td>8</td>
-                    <td><a><img src="assets/Iconos/actualizar.svg" class="iconos-tam" name="actualizaProducto"></a></td>
-                    <td><a href=""><img src="assets/Iconos/eliminar.svg" class="iconos-tam"></a></td>
-                </tr>
+                <c:forEach var="producto" items="${lista}">
+                    <tr>  
+                        <td><c:out value="${producto.claveProdcto}"/></td>
+                        <td><c:out value="${producto.nombreProd}"/></td>
+                        <td><c:out value="${producto.descripcionProd}"/></td>
+                        <td>$<c:out value="${producto.costoProd}"/></td>
+                        <td>$<c:out value="${producto.precioProd}"/></td>
+                        <td><c:out value="${producto.cantidad}"/></td>
+                        <td><a href="AdministradorController?accion=modificarProducto&claveProd=<c:out value="${producto.claveProdcto}"/>"><img src="assets/Iconos/actualizar.svg" class="iconos-tam"></a></td>
+                        <td><a href=""><img src="assets/Iconos/eliminar.svg" class="iconos-tam"></a></td>
+                    </tr>
+                </c:forEach>
+                    
             </tbody>
         </table>
     </div>

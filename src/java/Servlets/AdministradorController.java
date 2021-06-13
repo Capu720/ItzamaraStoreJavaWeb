@@ -16,6 +16,8 @@ import Administracion.ClienteDAO;
 import Administracion.Cliente;
 import Administracion.Proveedor;
 import Administracion.ProveedorDAO;
+import Producto.Producto;
+import Producto.ProductoDAO;
 import Mensajes.Mensaje;
 
 @WebServlet(name = "AdministradorController", urlPatterns = {"/AdministradorController"})
@@ -27,6 +29,7 @@ public class AdministradorController extends HttpServlet {
         //Llamamos  a la clsae e instanciamos los objetos que tiene el administrador
         ClienteDAO clienteDAO =  new ClienteDAO();
         ProveedorDAO ProveedorDAO = new ProveedorDAO();
+        ProductoDAO ProductoDAO = new ProductoDAO();
         String accion,nombre,paterno,materno,correo,telefono,contra;
         RequestDispatcher dispatcher = null;
         
@@ -75,15 +78,7 @@ public class AdministradorController extends HttpServlet {
             dispatcher = request.getRequestDispatcher("Clientes.jsp");
             List<Cliente> listaclientes = clienteDAO.listaClientes();
             request.setAttribute("lista", listaclientes);
-        
-        
-        
-        
         }
-        
-        
-        
-        
         
         /*TODO LO DE PROVEEDORES*/
              
@@ -131,9 +126,36 @@ public class AdministradorController extends HttpServlet {
             dispatcher = request.getRequestDispatcher("proveedores.jsp");
             List<Proveedor> listaProveedores = ProveedorDAO.listaProveedores();
             request.setAttribute("lista", listaProveedores);
-            
+          
+        }
+        
+        /*TODO LO DE PRODUCTOS*/
+        
+        else if("verProductos".equals(accion)){
+            dispatcher = request.getRequestDispatcher("productos.jsp");
+            List<Producto> listaProductos = ProductoDAO.listaProdutos();
+            request.setAttribute("lista", listaProductos);
+        }
+        
+        else if("modificarProducto".equals(accion)){
+           
+            dispatcher = request.getRequestDispatcher("actualiProducto.jsp");
+            int id = Integer.parseInt(request.getParameter("claveProd"));
+            Producto producto = ProductoDAO.selProd(id);
+            request.setAttribute("produ", producto);
+        
         
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         else{
             dispatcher = request.getRequestDispatcher("administradorPrincipal.jsp");  

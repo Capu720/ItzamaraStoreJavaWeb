@@ -6,12 +6,12 @@ package Producto;
  */
 public class Producto {
     
-    private String claveProdcto, nombreProd, descripcionProd, marcaProd, categoriaProd, imagen;
-    private int cantidad;
+    private String nombreProd, descripcionProd, marcaProd, categoriaProd, imagen;
+    private int cantidad,claveProdcto;
     private double costoProd, precioProd;
     
-    public Producto(String claveProducto, int cantidad, String nombreProd, String descripcionProd, String marcaProd, String categoriaProd, double costoProd, double precioProd, String imagen){
-        this.claveProdcto = claveProducto;
+    public Producto(int claveProdcto, int cantidad, String nombreProd, String descripcionProd, String marcaProd, String categoriaProd, double costoProd, double precioProd, String imagen){
+        this.claveProdcto = claveProdcto;
         this.cantidad = cantidad;
         this.nombreProd = nombreProd;
         this.descripcionProd = descripcionProd;
@@ -23,11 +23,11 @@ public class Producto {
         
     }
 
-    public String getClaveProdcto() {
+    public int getClaveProdcto() {
         return claveProdcto;
     }
 
-    public void setClaveProdcto(String claveProdcto) {
+    public void setClaveProdcto(int claveProdcto) {
         this.claveProdcto = claveProdcto;
     }
 
