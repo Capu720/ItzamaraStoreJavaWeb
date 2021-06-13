@@ -76,7 +76,7 @@ public class UsuarioController extends HttpServlet {
                     dispatcher = request.getRequestDispatcher("administradorPrincipal.jsp"); 
                 }
                 else{//Es un cliente
-                    dispatcher = request.getRequestDispatcher("index.html"); 
+                    dispatcher = request.getRequestDispatcher("clientesPrincipal.html"); 
                 }
                 
             }

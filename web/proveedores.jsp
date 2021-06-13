@@ -76,7 +76,7 @@
     </div>
     <div id="Crear" class="seccion">
         <!--Formulario de bootstrap-->
-        <form class="needs-validation" autocomplete="off" novalidate="" id="idCrear" action="AdministradorController?accion=crearProveedor">
+        <form class="needs-validation" autocomplete="off" novalidate="" id="idCrear" action="AdministradorController?accion=crearProveedor" method="POST">
             <div id="FC1">
                 <div>
                     <label for="lClave">Clave</label>
@@ -84,7 +84,7 @@
                 </div> 
                 <div>
                     <label for="lNombre">Nombre</label>
-                    <input type="text" class="form-control" id="tcNombre"  name="tcClave" required>
+                    <input type="text" class="form-control" id="tcNombre"  name="tcNombre" required>
                 </div>  
                 <div>
                     <label for="lTelefono">Telefono</label>

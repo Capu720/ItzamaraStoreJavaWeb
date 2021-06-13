@@ -34,8 +34,8 @@
                     <th>Apellido Materno</th>
                     <th>Correo</th>
                     <th>Telefono</th>
-                    <th>Eliminar</th>
                     <th>Actualizar</th>
+                    <th>Eliminar</th>
                 </tr>
             </thead>
             
@@ -50,8 +50,8 @@
                         <td><c:out value="${cliente.apMat}"/></td>
                         <td><c:out value="${cliente.correoClt}"/></td>
                         <td><c:out value="${cliente.telefonoClt}"/></td>
-                        <td><a href=""><img src="assets/Iconos/eliminar.svg" class="iconos-tam"></a></td>
-                        <td><a><img src="assets/Iconos/actualizar.svg" class="iconos-tam" name="actualizar"></a></td>
+                        <td><a href="AdministradorController?accion=verCliente&claveUsuario=<c:out value="${cliente.claveUsuario}"/>"><img src="assets/Iconos/actualizar.svg" class="iconos-tam" name="actualizar"></a></td>
+                        <td><a href="AdministradorController?accion=eliminarClinte&claveUsuario=<c:out value="${cliente.claveUsuario}"/>"><img src="assets/Iconos/eliminar.svg" class="iconos-tam"></a></td>
                      </tr>
                 </c:forEach>
                 

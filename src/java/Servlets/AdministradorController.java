@@ -31,17 +31,62 @@ public class AdministradorController extends HttpServlet {
         RequestDispatcher dispatcher = null;
         
         accion = request.getParameter("accion");
-        
+        System.out.println("accion:"+accion);
         //Jugamos con los valores que puede tener accion o basicamente lo que puede hacer el usuario
         //Mostramos todos los datos
+        
+         /*TODO LO DE CLIENTES*/
         
         if("verClientes".equals(accion)){
            //Cargamos la pagina de clientes con todos los que haya para eso la lista
            dispatcher = request.getRequestDispatcher("Clientes.jsp");
            List<Cliente> listaclientes = clienteDAO.listaClientes();
            request.setAttribute("lista", listaclientes);
-       }
+        }
         
+        else if("verCliente".equals(accion)){
+            dispatcher = request.getRequestDispatcher("actualiClientes.jsp");
+            int id = Integer.parseInt(request.getParameter("claveUsuario"));
+            Cliente cliente = clienteDAO.selCliente(id);
+            request.setAttribute("cliente", cliente);
+        }
+        
+        else if("actualizarCliente".equals(accion)){
+            
+            int clave = Integer.parseInt(request.getParameter("tClave"));
+            nombre = request.getParameter("tNombre");
+            telefono = request.getParameter("telefono");
+            paterno = request.getParameter("tApPaterno");
+            materno = request.getParameter("tApMaterno");
+            correo = request.getParameter("tCorreo");
+            Cliente cliente = new Cliente(clave, "", telefono, nombre, paterno, materno,correo);
+            clienteDAO.actualizarCliente(cliente);
+            dispatcher = request.getRequestDispatcher("Clientes.jsp");
+            List<Cliente> listaclientes = clienteDAO.listaClientes();
+            request.setAttribute("lista", listaclientes);
+     
+        }
+        
+        else if("eliminarClinte".equals(accion)){
+        
+            String id = request.getParameter("claveUsuario");
+            clienteDAO.eliminarCliente(id);
+            System.out.println("Elimado exitosamente");
+            dispatcher = request.getRequestDispatcher("Clientes.jsp");
+            List<Cliente> listaclientes = clienteDAO.listaClientes();
+            request.setAttribute("lista", listaclientes);
+        
+        
+        
+        
+        }
+        
+        
+        
+        
+        
+        /*TODO LO DE PROVEEDORES*/
+             
         else if("verProveedores".equals(accion)){
             dispatcher = request.getRequestDispatcher("proveedores.jsp");
             List<Proveedor> listaProveedores = ProveedorDAO.listaProveedores();
@@ -70,12 +115,24 @@ public class AdministradorController extends HttpServlet {
             int clave = Integer.parseInt(request.getParameter("tcClave"));
             nombre = request.getParameter("tcNombre");
             telefono = request.getParameter("tcTelefono");
-            
             Proveedor proveedor = new Proveedor(clave, telefono, nombre);
             ProveedorDAO.insertarProveedor(proveedor);
             dispatcher = request.getRequestDispatcher("proveedores.jsp");
             List<Proveedor> listaProveedores = ProveedorDAO.listaProveedores();
             request.setAttribute("lista", listaProveedores);
+        }
+        
+        else if("atualizarProv".equals(accion)){
+            int clave = Integer.parseInt(request.getParameter("taClave"));
+            nombre = request.getParameter("taNombre");
+            telefono = request.getParameter("taTelefono");
+            Proveedor proveedor = new Proveedor(clave,telefono,nombre);
+            ProveedorDAO.actualizarProveedor(proveedor);
+            dispatcher = request.getRequestDispatcher("proveedores.jsp");
+            List<Proveedor> listaProveedores = ProveedorDAO.listaProveedores();
+            request.setAttribute("lista", listaProveedores);
+            
+        
         }
         
         else{

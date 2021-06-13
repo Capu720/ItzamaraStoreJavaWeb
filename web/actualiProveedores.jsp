@@ -6,6 +6,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Actualizar Proveedores</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/styles-2.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="encabezado">
@@ -13,7 +17,7 @@
         </div>
         
         <div id="actualizaProveedor" class="seccion">
-            <form class="needs-validation" autocomplete="off" action="AdministradorController?accion=verProveedores">
+            <form class="needs-validation" autocomplete="off" action="AdministradorController?accion=atualizarProv" method="POST">
                 <div id="FC1">
                     <div>
                         <label for="lClave">Clave</label>
