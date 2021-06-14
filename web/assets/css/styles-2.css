@@ -110,6 +110,7 @@ h1{
     display: flex;
     justify-content: flex-end;
     width: 70%;
+    align-items: center;
 }
 #btnRegresar{
     margin-right: 1%;
@@ -144,6 +145,19 @@ h1{
 #foto img {
     height: 80%;
     width:  80%;
+}
+.tamL{
+    font-size: large;
+}
+.n{
+    font-size: 20px;
+    font-weight: 800px;
+}
+.inline{
+    display: inline;
+}
+#cantidades{
+    margin-left: 5%;
 }
 /*Necesita un diseño responsivo*/
 

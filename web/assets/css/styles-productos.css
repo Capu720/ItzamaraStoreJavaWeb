@@ -23,6 +23,25 @@
     padding: 1em;
 }
 
+/*Se utiliza en compra-venta*/
+.wrapper{
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+}
+.p{
+    background-color: transparent;
+    display: grid;
+    grid-gap: 20px;
+    padding: 1em;
+    text-align: center;
+}
+.info{
+    border-left: 2px rgb(222,226,230) solid;
+    margin-left: 20px;
+    padding: 10px 30px 10px 30px;
+}
+/*--------------*/
+
 .producto{
     background-color: white;
     height: 400px;

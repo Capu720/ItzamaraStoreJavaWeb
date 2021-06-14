@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles-2.css">
+    <link rel="stylesheet" href="assets/css/styles-productos.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="encabezado">
+        <h1>Venta</h1>
+    </div>
+    <div class="seccion">
+        <div id="cantidades">
+            <div>
+                <p class="inline n">Monto Total: </p><p class="inline n" id="MT">$500</p>
+            </div>
+            <div>
+                <p class="inline n">Monto Pagado: </p><p class="inline n" id="MP">$200</p>
+            </div>
+            <br><br>
+
+        </div>
+        
+        <div class="wrapper">
+            <div class="p">
+                <p class="tamL pink">Productos vendidos</p>
+                <div class="producto">
+                    <div class="imagenProdContenedor">
+                        <img src="assets/img/Productos/aretes_caras.jpg" class="imagenProd">
+                    </div>
+                    <div class="infoProducto">
+                        <p class="nombreProd">Aretes morados</p>
+                        <p class="descripcionProd">Aretes de oro con piedras color amatista</p> 
+                    </div>
+                </div>
+                <div class="producto">
+                    <div class="imagenProdContenedor">
+                        <img src="assets/img/Productos/aretes_caras.jpg" class="imagenProd">
+                    </div>
+                    <div class="infoProducto">
+                        <p class="nombreProd">Aretes morados</p>
+                        <p class="descripcionProd">Aretes de oro con piedras color amatista</p> 
+                    </div>
+                </div>
+                <div class="producto">
+                    <div class="imagenProdContenedor">
+                        <img src="assets/img/Productos/aretes_caras.jpg" class="imagenProd">
+                    </div>
+                    <div class="infoProducto">
+                        <p class="nombreProd">Aretes morados</p>
+                        <p class="descripcionProd">Aretes de oro con piedras color amatista</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <p class="tamL pink">Pagos</p>
+                <br>
+                <table class="table table-hover" id="tVentas">
+                    <thead>
+                        <tr>
+                            <th>Folio</th>
+                            <th>Fecha</th>
+                            <th>Monto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1235</td>
+                            <td>19/Abril/2021</td>
+                            <td>$150</td>
+                        </tr>  
+                        <tr>
+                            <td>1236</td>
+                            <td>30/Abril/2021</td>
+                            <td>$50</td>
+                        </tr>  
+                    </tbody>
+                </table>
+                <br>
+                <p class="tamL pink">Pagos en efectivo</p>
+                <form class="needs-validation" autocomplete="off" novalidate="" id="idPago">
+                    <div id="FC3">
+                        <label for="lCl">Cantidad: </label>
+                        <input type="number" class="form-control" id="idCantidad" required>
+                        <button type="submit" class="btn btn-outline-dark" id="btnActualizar">Registrar pago</button>
+                    </div>
+                </form>
+                <script src="assets/js/validacion.js"></script>
+            </div>
+        </div>
+        
+        
+    </div>
+    
+</body>
+</html>
