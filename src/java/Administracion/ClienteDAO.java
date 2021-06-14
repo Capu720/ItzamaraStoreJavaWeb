@@ -1,14 +1,13 @@
-package Administracion;
-import java.sql.*;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.List;
 /**
  *
  * @author Equipo 1 Bambi&Fork
  */
 
-
+package Administracion;
+import java.sql.*;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 import Conexion.Conexion;
 
 public class ClienteDAO {
