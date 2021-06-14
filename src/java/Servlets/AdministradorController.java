@@ -35,7 +35,7 @@ public class AdministradorController extends HttpServlet {
         ProductoDAO ProductoDAO = new ProductoDAO();
         CatalogoDAO CatalodoDAO = new CatalogoDAO();
         String accion,nombre,paterno,materno,correo,telefono,contra, descripcion, imagen;
-        int cantidad;
+        int cantidad, catalogo = 0;
         double precio, costo;
         RequestDispatcher dispatcher = null;
         
@@ -211,15 +211,42 @@ public class AdministradorController extends HttpServlet {
         }
         
         
-       else if("verCataProducto".equals(accion)){
+        else if("verCataProducto".equals(accion)){
            
             dispatcher = request.getRequestDispatcher("agregarProductosCatalogo.jsp");
-            int id = Integer.parseInt(request.getParameter("claveCata"));
-            List<ProductosCatalogo> listaProCat = CatalodoDAO.listaProdCatalogos(id);
+            int id1 = Integer.parseInt(request.getParameter("claveCata"));
+            catalogo = id1;
+            List<ProductosCatalogo> listaProCat = CatalodoDAO.listaProdCatalogos(id1);
             request.setAttribute("lista", listaProCat);
             List<ProductosCatalogo> listaNoProCat = CatalodoDAO.listaProdNoCatalogos();
             request.setAttribute("lista1", listaNoProCat); 
             
+        }
+        
+        else if("eliminarProdCat".equals(accion)){
+            String id = request.getParameter("claveProd");
+            CatalodoDAO.eliminarProCat(id);
+            System.out.println("Elimado exitosamente");
+            dispatcher = request.getRequestDispatcher("agregarProductosCatalogo.jsp");
+            System.out.println("catalogo:"+id);
+            List<ProductosCatalogo> listaProCat = CatalodoDAO.listaProdCatalogos(1);
+            request.setAttribute("lista", listaProCat);
+            List<ProductosCatalogo> listaNoProCat = CatalodoDAO.listaProdNoCatalogos();
+            request.setAttribute("lista1", listaNoProCat); 
+        
+        }
+        
+        else if("insertarProdCat".equals(accion)){
+            String id = request.getParameter("claveProd");
+            System.out.println("id:"+id);
+            System.out.println("catalogo:"+catalogo);
+            CatalodoDAO.insertarProdCat(1, id);
+            dispatcher = request.getRequestDispatcher("agregarProductosCatalogo.jsp");
+            List<ProductosCatalogo> listaProCat = CatalodoDAO.listaProdCatalogos(1);
+            request.setAttribute("lista", listaProCat);
+            List<ProductosCatalogo> listaNoProCat = CatalodoDAO.listaProdNoCatalogos();
+            request.setAttribute("lista1", listaNoProCat); 
+        
         }
         
         

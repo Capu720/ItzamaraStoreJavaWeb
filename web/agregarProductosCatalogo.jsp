@@ -35,9 +35,9 @@
                 <c:forEach var="catalogoProd" items="${lista}">
                     <tr>  
                         <td><c:out value="${catalogoProd.claveProducto}"/></td>
-                        <td><c:out value="${catalogoProd.Nombre}"/></td>
-                        <td><c:out value="${catalogoProd.Descripcion}"/></td>
-                        <td><a href=""><img src="assets/Iconos/eliminar.svg" class="iconos-tam"></a></td>
+                        <td><c:out value="${catalogoProd.nombre}"/></td>
+                        <td><c:out value="${catalogoProd.descripcion}"/></td>
+                        <td><a href="AdministradorController?accion=eliminarProdCat&claveProd=<c:out value="${catalogoProd.claveProducto}"/>"><img src="assets/Iconos/eliminar.svg" class="iconos-tam"></a></td>
                     </tr>
                 </c:forEach>
                 
@@ -58,9 +58,9 @@
                 <c:forEach var="catalogoProd1" items="${lista1}">
                     <tr>  
                         <td><c:out value="${catalogoProd1.claveProducto}"/></td>
-                        <td><c:out value="${catalogoProd1.Nombre}"/></td>
-                        <td><c:out value="${catalogoProd1.Descripcion}"/></td>
-                        <td><a href=""><img src="assets/Iconos/eliminar.svg" class="iconos-tam"></a></td>
+                        <td><c:out value="${catalogoProd1.nombre}"/></td>
+                        <td><c:out value="${catalogoProd1.descripcion}"/></td>
+                        <td><a href="AdministradorController?accion=insertarProdCat&claveProd=<c:out value="${catalogoProd1.claveProducto}"/>"><img src="assets/Iconos/anadir.svg" class="iconos-tam"></a></td>
                     </tr>
                 </c:forEach>
             </tbody>

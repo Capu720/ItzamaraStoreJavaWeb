@@ -5,12 +5,12 @@ package Administracion;
  * @author Bamb&fork
  */
 public class ProductosCatalogo {
-    private String claveProducto, Nombre, Descripcion;
+    private String claveProducto, nombre, descripcion;
     
-    public ProductosCatalogo(String claveProducto, String Nombre, String Descripcion){
+    public ProductosCatalogo(String claveProducto, String nombre, String descripcion){
         this.claveProducto = claveProducto;
-        this.Nombre = Nombre;
-        this.Descripcion = Descripcion;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
     }
 
     public String getClaveProducto() {
@@ -22,19 +22,19 @@ public class ProductosCatalogo {
     }
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
     public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
+        this.nombre = Nombre;
     }
 
     public String getDescripcion() {
-        return Descripcion;
+        return descripcion;
     }
 
     public void setDescripcion(String Descripcion) {
-        this.Descripcion = Descripcion;
+        this.descripcion = Descripcion;
     }
     
     

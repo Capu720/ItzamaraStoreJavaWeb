@@ -104,6 +104,45 @@ public class CatalogoDAO {
         }
     }
     
+    public boolean eliminarProCat(String _id){
+        
+        PreparedStatement ps;
+        try{
+            
+            String comando = "DELETE from itzamaras.catalogo_has_producto where(Producto_idProducto =?)";
+            ps = conexion.prepareStatement(comando);
+            ps.setString(1, _id);
+         
+            ps.execute();
+            return true;
+            
+            
+        }catch(SQLException e){
+            System.out.println(e.toString());
+            return false;
+        }
+        
+    }
+    
+     public boolean insertarProdCat(int catalogo, String prod){
+     
+     PreparedStatement ps;
+        try{
+            
+            String comando = "insert into itzamaras.catalogo_has_producto values (?,?);";
+            ps = conexion.prepareStatement(comando);
+            ps.setInt(1, catalogo);
+            ps.setString(2, prod);
+            ps.execute();
+            return true;
+            
+            
+        }catch(SQLException e){
+            System.out.println(e.toString());
+            return false;
+        }
+     
+     }
      
     
 }
