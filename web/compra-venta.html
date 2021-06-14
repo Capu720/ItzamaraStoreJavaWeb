@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ventas</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/styles-2.css">
     <link rel="stylesheet" href="assets/css/styles-productos.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -23,40 +24,38 @@
             <div>
                 <p class="inline n">Monto Pagado: </p><p class="inline n" id="MP">$200</p>
             </div>
+            <div>
+                <p class="inline n">Productos entregados: </p><p class="inline n" id="MP">No</p>
+            </div>
             <br><br>
 
         </div>
         
         <div class="wrapper">
-            <div class="p">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <p class="tamL pink">Productos vendidos</p>
-                <div class="producto">
-                    <div class="imagenProdContenedor">
-                        <img src="assets/img/Productos/aretes_caras.jpg" class="imagenProd">
-                    </div>
-                    <div class="infoProducto">
-                        <p class="nombreProd">Aretes morados</p>
-                        <p class="descripcionProd">Aretes de oro con piedras color amatista</p> 
-                    </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img src="assets/img/Productos/aretes_caras.jpg" class="d-block w-100 tamImg " alt="...">
+                    <p class="prTitulo">Aretes de caras</p>
+                    <p>Aretes de oro con piedras color amatista</p>
                 </div>
-                <div class="producto">
-                    <div class="imagenProdContenedor">
-                        <img src="assets/img/Productos/aretes_caras.jpg" class="imagenProd">
-                    </div>
-                    <div class="infoProducto">
-                        <p class="nombreProd">Aretes morados</p>
-                        <p class="descripcionProd">Aretes de oro con piedras color amatista</p> 
-                    </div>
+                <div class="carousel-item">
+                    <img src="assets/img/Productos/anillo_rosa.jpg" class="d-block w-100 tamImg" alt="...">
+                    <p class="prTitulo">Anillo rosa</p>
+                    <p>Anillo rosa de oro</p>
                 </div>
-                <div class="producto">
-                    <div class="imagenProdContenedor">
-                        <img src="assets/img/Productos/aretes_caras.jpg" class="imagenProd">
-                    </div>
-                    <div class="infoProducto">
-                        <p class="nombreProd">Aretes morados</p>
-                        <p class="descripcionProd">Aretes de oro con piedras color amatista</p> 
-                    </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
+                <br>
+                <button type="submit" class="btn btn-outline-dark" id="btnPE">Productos entregados</button>
             </div>
             <div class="info">
                 <p class="tamL pink">Pagos</p>
@@ -85,18 +84,16 @@
                 <br>
                 <p class="tamL pink">Pagos en efectivo</p>
                 <form class="needs-validation" autocomplete="off" novalidate="" id="idPago">
-                    <div id="FC3">
+                    <div id="pago">
                         <label for="lCl">Cantidad: </label>
                         <input type="number" class="form-control" id="idCantidad" required>
-                        <button type="submit" class="btn btn-outline-dark" id="btnActualizar">Registrar pago</button>
+                        <button type="submit" class="btn btn-outline-dark" id="btnRegistrar">Registrar</button>
                     </div>
                 </form>
                 <script src="assets/js/validacion.js"></script>
             </div>
-        </div>
-        
-        
+        </div>    
     </div>
-    
+    <br>
 </body>
 </html>
