@@ -249,6 +249,15 @@ public class AdministradorController extends HttpServlet {
         
         }
         
+        else if("impCatalogo".equals(accion)){
+            dispatcher = request.getRequestDispatcher("ImprimirCatalogo.jsp");
+            int id1 = Integer.parseInt(request.getParameter("claveCata"));
+            List<ProductosCatalogo> listaProCat = CatalodoDAO.listaProdCataImp(id1);
+            request.setAttribute("lista", listaProCat);
+            
+        
+        }
+        
         
         
         

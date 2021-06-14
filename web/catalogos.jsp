@@ -31,15 +31,18 @@
                     <th>Clave</th>
                     <th>Nombre</th>
                     <th>Agregar Productos</th> <!--Se podrán eliminar y agregar productos-->
+                    <th>Imprimir</th>
                     <th>Eliminar</th>
                 </tr>
             </thead>
+            
             <tbody>
                 <c:forEach var="catalogo" items="${lista}">
                     <tr>  
                         <td><c:out value="${catalogo.claveCata}"/></td>
                         <td><c:out value="${catalogo.nombreCata}"/></td>
                         <td><a href="AdministradorController?accion=verCataProducto&claveCata=<c:out value="${catalogo.claveCata}"/>"><img src="assets/Iconos/caja.svg" class="iconos-tam"></a></td>
+                         <td><a href="AdministradorController?accion=impCatalogo&claveCata=<c:out value="${catalogo.claveCata}"/>"><img src="assets/Iconos/imprimir.png" class="iconos-tam"></a></td>
                         <td><a href=""><img src="assets/Iconos/eliminar.svg" class="iconos-tam"></a></td>
                     </tr>
                 </c:forEach>

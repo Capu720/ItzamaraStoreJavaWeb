@@ -65,7 +65,7 @@ public class CatalogoDAO {
                 String id = rs.getString("Producto_idProducto");
                 String nombre = rs.getString("nombre");
                 String descripcion = rs.getString("descripcion");
-                ProductosCatalogo catalogoprod = new ProductosCatalogo(id, nombre, descripcion);
+                ProductosCatalogo catalogoprod = new ProductosCatalogo(id, nombre, descripcion,0,"");
                 lista.add(catalogoprod);
             }
             return lista;
@@ -93,7 +93,7 @@ public class CatalogoDAO {
                 String id = rs.getString("idProducto");
                 String nombre = rs.getString("nombre");
                 String descripcion = rs.getString("descripcion");
-                ProductosCatalogo catalogoprod = new ProductosCatalogo(id, nombre, descripcion);
+                ProductosCatalogo catalogoprod = new ProductosCatalogo(id, nombre, descripcion,0,"");
                 lista.add(catalogoprod);
             }
             return lista;
@@ -124,7 +124,7 @@ public class CatalogoDAO {
         
     }
     
-     public boolean insertarProdCat(int catalogo, String prod){
+    public boolean insertarProdCat(int catalogo, String prod){
      
      PreparedStatement ps;
         try{
@@ -142,7 +142,39 @@ public class CatalogoDAO {
             return false;
         }
      
-     }
+    }
+    
+    public List<ProductosCatalogo>listaProdCataImp(int _id){
+    
+        PreparedStatement ps;
+        ResultSet rs;
+        
+        List<ProductosCatalogo> lista = new ArrayList<>();
+        
+        try{
+            String comando = "select itzamaras.catalogo_has_producto.Producto_idProducto, nombre, descripcion, precio, imagen from itzamaras.producto, itzamaras.catalogo, itzamaras.catalogo_has_producto, itzamaras.imagen where (Catalogo_idCatalogo = ? and itzamaras.catalogo_has_producto.Producto_idProducto = idProducto and idCatalogo = Catalogo_idCatalogo and itzamaras.catalogo_has_producto.Producto_idProducto = itzamaras.imagen.Producto_idProducto)";
+            ps = conexion.prepareStatement(comando);
+            ps.setInt(1,_id);
+            rs = ps.executeQuery();
+            
+            while(rs.next()){
+                //Aqui tienen que ir los nombres que pusimos en la tabla de mysql
+                String id = rs.getString("Producto_idProducto");
+                String nombre = rs.getString("nombre");
+                String descripcion = rs.getString("descripcion");
+                double precio = rs.getDouble("precio");
+                String imagen = rs.getString("imagen");
+                ProductosCatalogo catalogoprod = new ProductosCatalogo(id, nombre, descripcion, precio, imagen);
+                lista.add(catalogoprod);
+            }
+            return lista;
+            
+        }catch(SQLException e){
+            System.out.println(e.toString());
+            return null;
+        }
+    }
+    
      
     
 }
