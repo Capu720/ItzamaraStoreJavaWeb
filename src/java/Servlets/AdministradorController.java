@@ -21,6 +21,8 @@ import Producto.ProductoDAO;
 import Administracion.Catalogo;
 import Administracion.CatalogoDAO;
 import Administracion.ProductosCatalogo;
+import Venta.Venta;
+import Venta.EstadoDeResultados;
 import Mensajes.Mensaje;
 
 @WebServlet(name = "AdministradorController", urlPatterns = {"/AdministradorController"})
@@ -34,6 +36,7 @@ public class AdministradorController extends HttpServlet {
         ProveedorDAO ProveedorDAO = new ProveedorDAO();
         ProductoDAO ProductoDAO = new ProductoDAO();
         CatalogoDAO CatalodoDAO = new CatalogoDAO();
+        EstadoDeResultados EstadoDeResultados = new EstadoDeResultados("","",0,0,0);
         String accion,nombre,paterno,materno,correo,telefono,contra, descripcion, imagen;
         int cantidad, catalogo = 0;
         double precio, costo;
@@ -238,8 +241,6 @@ public class AdministradorController extends HttpServlet {
         
         else if("insertarProdCat".equals(accion)){
             String id = request.getParameter("claveProd");
-            System.out.println("id:"+id);
-            System.out.println("catalogo:"+catalogo);
             CatalodoDAO.insertarProdCat(1, id);
             dispatcher = request.getRequestDispatcher("agregarProductosCatalogo.jsp");
             List<ProductosCatalogo> listaProCat = CatalodoDAO.listaProdCatalogos(1);
@@ -254,12 +255,29 @@ public class AdministradorController extends HttpServlet {
             int id1 = Integer.parseInt(request.getParameter("claveCata"));
             List<ProductosCatalogo> listaProCat = CatalodoDAO.listaProdCataImp(id1);
             request.setAttribute("lista", listaProCat);
-            
-        
         }
         
+        /*TODO LO DE GANACIAS*/
+        
+        else if("verGana".equals(accion)){
+            dispatcher = request.getRequestDispatcher("ganancias.jsp");
+        }
+        
+        else if("generarGanancia".equals(accion)){
+            String fechaIni = request.getParameter("txtInicio");
+            String fechaFin = request.getParameter("txtFin");
+         
+            dispatcher = request.getRequestDispatcher("verGanancias.jsp");
+            List<Venta> listaventas = EstadoDeResultados.mostarVenta(fechaIni, fechaFin);
+            request.setAttribute("lista", listaventas);
+           
+            dispatcher = request.getRequestDispatcher("verGanancias.jsp");
+            EstadoDeResultados est = EstadoDeResultados.generarGanancia(fechaIni, fechaFin); 
+            
+            request.setAttribute("estado", est);
         
         
+        }
         
         
         

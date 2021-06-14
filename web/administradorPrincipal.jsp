@@ -36,7 +36,7 @@
         </div>
         <div class="opcionesAdmin">
             <div class="matriz">
-                <div class="celda"><a href="ganancias.jsp">Ganancias</a></div>
+                <div class="celda"><a href="AdministradorController?accion=verGana">Ganancias</a></div>
                 <div class="celda"><a href="AdministradorController?accion=verCatalogos">Gestionar catálogos</a></div>
                 <div class="celda"><a href="AdministradorController?accion=verClientes">Gestionar clientes</a></div>
                 <div class="celda"><a href="AdministradorController?accion=verProductos">Gestionar productos</a></div>
