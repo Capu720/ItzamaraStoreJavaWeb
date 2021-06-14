@@ -6,13 +6,17 @@
     height: 3em;
     background-color: transparent;
     box-sizing: border-box;
-    padding-top: 0.5em;
+    padding-top: 0;
     padding-left: 10%;
     padding-right: 10%;
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+#linkAcerca, #linkContacto, #registro{
+    color: #ff848a !important;
 }
 
 .logo{
@@ -68,4 +72,16 @@
 .opciones li a:hover{
     cursor: pointer;
     color: #ff848a !important;
+}
+
+.fondo-oscuro{
+    background-color: #2d2b2b !important;
+}
+
+.fondo-oscuro a{
+    color: #fef9fb !important;
+}
+
+.fondo-oscuro .opciones a{
+    color: #fef9fb !important;
 }

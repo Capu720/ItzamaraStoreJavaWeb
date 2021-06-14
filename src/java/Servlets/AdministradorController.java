@@ -18,6 +18,11 @@ import Administracion.Proveedor;
 import Administracion.ProveedorDAO;
 import Producto.Producto;
 import Producto.ProductoDAO;
+import Administracion.Catalogo;
+import Administracion.CatalogoDAO;
+import Administracion.ProductosCatalogo;
+import Venta.Venta;
+import Venta.EstadoDeResultados;
 import Mensajes.Mensaje;
 
 @WebServlet(name = "AdministradorController", urlPatterns = {"/AdministradorController"})
@@ -30,8 +35,10 @@ public class AdministradorController extends HttpServlet {
         ClienteDAO clienteDAO =  new ClienteDAO();
         ProveedorDAO ProveedorDAO = new ProveedorDAO();
         ProductoDAO ProductoDAO = new ProductoDAO();
+        CatalogoDAO CatalodoDAO = new CatalogoDAO();
+        EstadoDeResultados EstadoDeResultados = new EstadoDeResultados("","",0,0,0);
         String accion,nombre,paterno,materno,correo,telefono,contra, descripcion, imagen;
-        int cantidad;
+        int cantidad, catalogo = 0;
         double precio, costo;
         RequestDispatcher dispatcher = null;
         
@@ -147,7 +154,7 @@ public class AdministradorController extends HttpServlet {
             request.setAttribute("produ", producto);
         }
         
-         else if("actualizarProd".equals(accion)){
+        else if("actualizarProd".equals(accion)){
             int clave = Integer.parseInt(request.getParameter("taClave"));
             nombre = request.getParameter("taNombre");
             telefono = request.getParameter("taTelefono");
@@ -166,7 +173,7 @@ public class AdministradorController extends HttpServlet {
           
         }
          
-         else if("insertaProducto".equals(accion)){
+        else if("insertaProducto".equals(accion)){
              
             int clave = Integer.parseInt(request.getParameter("tcClave"));
             nombre = request.getParameter("tcNombre");
@@ -187,7 +194,7 @@ public class AdministradorController extends HttpServlet {
          
         }
          
-         else if("eliminarProducto".equals(accion)){
+        else if("eliminarProducto".equals(accion)){
              
             String id = request.getParameter("claveProd");
             ProductoDAO.eliminarProducto(id);
@@ -196,15 +203,81 @@ public class AdministradorController extends HttpServlet {
             List<Producto> listaProductos = ProductoDAO.listaProdutos();
             request.setAttribute("lista", listaProductos);
 
-         }
+        }
+        
+        /*TODO LO DE CATALOGOS*/
+        
+        else if("verCatalogos".equals(accion)){
+            dispatcher = request.getRequestDispatcher("catalogos.jsp");
+            List<Catalogo> listaCatalogos = CatalodoDAO.listaCatalogos();
+            request.setAttribute("lista", listaCatalogos);
+        }
         
         
+        else if("verCataProducto".equals(accion)){
+           
+            dispatcher = request.getRequestDispatcher("agregarProductosCatalogo.jsp");
+            int id1 = Integer.parseInt(request.getParameter("claveCata"));
+            catalogo = id1;
+            List<ProductosCatalogo> listaProCat = CatalodoDAO.listaProdCatalogos(id1);
+            request.setAttribute("lista", listaProCat);
+            List<ProductosCatalogo> listaNoProCat = CatalodoDAO.listaProdNoCatalogos();
+            request.setAttribute("lista1", listaNoProCat); 
+            
+        }
+        
+        else if("eliminarProdCat".equals(accion)){
+            String id = request.getParameter("claveProd");
+            CatalodoDAO.eliminarProCat(id);
+            System.out.println("Elimado exitosamente");
+            dispatcher = request.getRequestDispatcher("agregarProductosCatalogo.jsp");
+            System.out.println("catalogo:"+id);
+            List<ProductosCatalogo> listaProCat = CatalodoDAO.listaProdCatalogos(1);
+            request.setAttribute("lista", listaProCat);
+            List<ProductosCatalogo> listaNoProCat = CatalodoDAO.listaProdNoCatalogos();
+            request.setAttribute("lista1", listaNoProCat); 
+        
+        }
+        
+        else if("insertarProdCat".equals(accion)){
+            String id = request.getParameter("claveProd");
+            CatalodoDAO.insertarProdCat(1, id);
+            dispatcher = request.getRequestDispatcher("agregarProductosCatalogo.jsp");
+            List<ProductosCatalogo> listaProCat = CatalodoDAO.listaProdCatalogos(1);
+            request.setAttribute("lista", listaProCat);
+            List<ProductosCatalogo> listaNoProCat = CatalodoDAO.listaProdNoCatalogos();
+            request.setAttribute("lista1", listaNoProCat); 
+        
+        }
+        
+        else if("impCatalogo".equals(accion)){
+            dispatcher = request.getRequestDispatcher("ImprimirCatalogo.jsp");
+            int id1 = Integer.parseInt(request.getParameter("claveCata"));
+            List<ProductosCatalogo> listaProCat = CatalodoDAO.listaProdCataImp(id1);
+            request.setAttribute("lista", listaProCat);
+        }
+        
+        /*TODO LO DE GANACIAS*/
+        
+        else if("verGana".equals(accion)){
+            dispatcher = request.getRequestDispatcher("ganancias.jsp");
+        }
+        
+        else if("generarGanancia".equals(accion)){
+            String fechaIni = request.getParameter("txtInicio");
+            String fechaFin = request.getParameter("txtFin");
+         
+            dispatcher = request.getRequestDispatcher("verGanancias.jsp");
+            List<Venta> listaventas = EstadoDeResultados.mostarVenta(fechaIni, fechaFin);
+            request.setAttribute("lista", listaventas);
+           
+            dispatcher = request.getRequestDispatcher("verGanancias.jsp");
+            EstadoDeResultados est = EstadoDeResultados.generarGanancia(fechaIni, fechaFin); 
+            
+            request.setAttribute("estado", est);
         
         
-        
-        
-        
-        
+        }
         
         
         

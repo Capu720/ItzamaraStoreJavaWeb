@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/style-1.css">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style-navbar.css">
 
     <script src="assets/js/pago-transferencia.js" type="text/javascript"></script>
 </head>
@@ -21,7 +22,7 @@
     <div>
         <h1 class="h1-titulo">Registro de pago por transferencia</h1>
     </div>
-    <form class="needs-validation" id="form-pago" name="form-pago" autocomplete="off" novalidate="">
+    <form class="form-pago-trans" class="needs-validation" id="form-pago" name="form-pago" autocomplete="off" novalidate="">
         <div class="col-6 centrado">
             <div class="div-datos">
                 <label class="form-label">Clave de rastreo</label>

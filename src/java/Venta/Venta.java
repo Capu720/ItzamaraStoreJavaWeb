@@ -6,10 +6,11 @@ package Venta;
  */
 public class Venta {
     
-    private int claveVta, claveClt, montoTotal, montoPagado;
+    private int claveVta, claveClt;
     private String fecha, listaProd;
+    private double montoTotal, montoPagado;
     
-    public Venta(int claveVta, int claveClt, int montoTotal, int montoPagado, String fecha, String listaProd){
+    public Venta(int claveVta, int claveClt, double montoTotal, double montoPagado, String fecha, String listaProd){
         this.claveVta = claveVta;
         this.claveClt = claveClt;
         this.montoTotal = montoTotal;
@@ -34,19 +35,19 @@ public class Venta {
         this.claveClt = claveClt;
     }
 
-    public int getMontoTotal() {
+    public double getMontoTotal() {
         return montoTotal;
     }
 
-    public void setMontoTotal(int montoTotal) {
+    public void setMontoTotal(double montoTotal) {
         this.montoTotal = montoTotal;
     }
 
-    public int getMontoPagado() {
+    public double getMontoPagado() {
         return montoPagado;
     }
 
-    public void setMontoPagado(int montoPagado) {
+    public void setMontoPagado(double montoPagado) {
         this.montoPagado = montoPagado;
     }
 

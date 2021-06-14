@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Julius+Sans+One&display=swap');
+html {
+    margin: 0;
+    
+}
+
+body {
+    margin: 0 !important;
+    font-family: 'Inconsolata', monospace;
+    font-size: 13px;
+    margin: 0;
+    background: linear-gradient(rgba(255, 132, 138, 0.349), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
+}
+
+#cata {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.Producto {
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 80%;
+    margin: 0;
+}
+
+.imagen {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: right;
+    width: auto;
+}
+
+.texto {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: left;
+}
+
+img {
+    padding-top: 1rem;
+    width: 60%;
+    border-radius: 3%;
+}
+
+h1 {
+    text-align: center;
+}
