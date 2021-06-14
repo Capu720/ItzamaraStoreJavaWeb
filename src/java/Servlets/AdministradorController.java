@@ -275,7 +275,12 @@ public class AdministradorController extends HttpServlet {
             EstadoDeResultados est = EstadoDeResultados.generarGanancia(fechaIni, fechaFin); 
             
             request.setAttribute("estado", est);
+        }
         
+        /*TODO LO DE VENTAS*/
+        
+        else if("verVentas".equals(accion)){
+            dispatcher = request.getRequestDispatcher("ventas.html");
         
         }
         
