@@ -60,7 +60,7 @@ public class ProductoDAO {
         Producto producto = null;
        
         try{
-            String comando = "select idProducto, nombre, descripcion, cantidad, precio, costo, imagen from itzamaras.producto, itzamaras.imagen where idProducto = "+_id+" and idImagen = "+_id;
+            String comando = "select idProducto, nombre, descripcion, cantidad, precio, costo, imagen from itzamaras.producto, itzamaras.imagen where idProducto = "+_id+" and Producto_idProducto = "+_id;
             ps = conexion.prepareStatement(comando);
             rs = ps.executeQuery();
             
@@ -85,6 +85,94 @@ public class ProductoDAO {
             System.out.println(e.toString());
             return null;
         }
+        
+    }
     
+    public boolean actualizarProducto(Producto producto){
+    
+        PreparedStatement ps;
+        
+        try{
+            
+            String comando = "UPDATE `itzamaras`.`producto` SET `nombre` = ?, `descripcion` =?, `cantidad` =?, `precio` =? WHERE (`idProducto` =?)";
+            ps = conexion.prepareStatement(comando);
+            ps.setString(1,producto.getNombreProd());
+            ps.setString(2,producto.getDescripcionProd());
+            ps.setDouble(3,producto.getCantidad());
+            ps.setDouble(4,producto.getPrecioProd());
+            ps.setInt(5,producto.getClaveProdcto());
+            ps.execute();
+            
+            String comando1 = "UPDATE `itzamaras`.`imagen` SET `imagen` =? WHERE (`idImagen` = ?)";
+            ps = conexion.prepareStatement(comando1);
+            ps.setString(1, "assets/img/Productos/"+producto.getImagen());
+            ps.setInt(2, producto.getClaveProdcto());
+            ps.execute();
+            
+            return true;
+            
+            
+        }catch(SQLException e){
+            System.out.println(e.toString());
+            return false;
+        }
+    }
+    
+    public boolean insertarProducto(Producto producto){
+     
+     PreparedStatement ps;
+        try{
+            
+            String comando = "INSERT INTO `itzamaras`.`producto` (`idProducto`, `nombre`, `descripcion`, `cantidad`, `precio`, `costo`, `Proveedor_idProveedor`) VALUES (?, ?, ?, ?, ?, ?, ?);";
+            ps = conexion.prepareStatement(comando);
+            ps.setInt(1, producto.getClaveProdcto());
+            ps.setString(2, producto.getNombreProd());
+            ps.setString(3, producto.getDescripcionProd());
+            ps.setInt(4, producto.getCantidad());
+            ps.setDouble(5, producto.getPrecioProd());
+            ps.setDouble(6, producto.getCostoProd());
+            ps.setInt(7, 1);
+            ps.execute();
+            
+            comando = "INSERT INTO `itzamaras`.`imagen` (`imagen`, `Producto_idProducto`) VALUES (?,?)";
+            ps = conexion.prepareStatement(comando);
+            ps.setString(1, "assets/img/Productos/"+producto.getImagen());
+            ps.setInt(2, producto.getClaveProdcto());
+            ps.execute();
+            
+            return true;
+            
+            
+        }catch(SQLException e){
+            System.out.println(e.toString());
+            return false;
+        }
+     
+    }
+     
+     
+    public boolean eliminarProducto(String _id){
+        
+        PreparedStatement ps;
+        try{
+            
+            String comando = "DELETE FROM `itzamaras`.`imagen` WHERE (`Producto_idProducto` =?)";
+            ps = conexion.prepareStatement(comando);
+            ps.setString(1, _id);
+            ps.execute();
+            
+            comando = "DELETE FROM `itzamaras`.`producto` WHERE (`idProducto` =?)";
+            ps = conexion.prepareStatement(comando);
+            ps.setString(1, _id);
+            ps.execute();
+           
+            return true;
+            
+            
+        }catch(SQLException e){
+            System.out.println(e.toString());
+            return false;
+        }
+        
     }
 }

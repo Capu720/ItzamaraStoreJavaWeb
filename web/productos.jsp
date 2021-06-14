@@ -48,7 +48,7 @@
                         <td>$<c:out value="${producto.precioProd}"/></td>
                         <td><c:out value="${producto.cantidad}"/></td>
                         <td><a href="AdministradorController?accion=modificarProducto&claveProd=<c:out value="${producto.claveProdcto}"/>"><img src="assets/Iconos/actualizar.svg" class="iconos-tam"></a></td>
-                        <td><a href=""><img src="assets/Iconos/eliminar.svg" class="iconos-tam"></a></td>
+                        <td><a href="AdministradorController?accion=eliminarProducto&claveProd=<c:out value="${producto.claveProdcto}"/>"><img src="assets/Iconos/eliminar.svg" class="iconos-tam"></a></td>
                     </tr>
                 </c:forEach>
                     
@@ -108,39 +108,39 @@
     <div id="Crear" class="seccion">
         <!--Formulario de bootstrap-->
         <div id="camposCrear">
-            <form class="needs-validation" autocomplete="off" novalidate="" id="idCrear">
+            <form class="needs-validation" autocomplete="off" novalidate="" id="idCrear" method="POST" action="AdministradorController?accion=insertaProducto">
                 <div id="FC1-1">
                     <div class="FC1-espacio">
                         <label for="lClave">Clave</label>
-                        <input type="text" class="form-control" id="tcClave" required>
+                        <input type="text" class="form-control" id="tcClave" name="tcClave" required>
                     </div> 
                     <div>
                         <label for="lNombre">Nombre</label>
-                        <input type="text" class="form-control" id="tcNombre"  required>
+                        <input type="text" class="form-control" id="tcNombre" name="tcNombre" required>
                     </div>  
                     <div>
                         <label for="lCantidad">Cantidad</label>
-                        <input type="text" class="form-control" id="tcCantidad"  required>
+                        <input type="text" class="form-control" id="tcCantidad" name="tcCantidad" required>
                     </div>           
                 </div>
                 <div class="espacio"></div>
                     <div>
                         <label for="lDescripcion">Descripción</label>
-                        <textarea class="form-control" id="txtcDescripcion" rows="3" required></textarea>
+                        <textarea class="form-control" id="txtcDescripcion" name="txtcDescripcion" rows="3" required></textarea>
                     </div>
                     <div class="espacio"></div>
                     <div id="FC1-1">
                         <div>
                             <label for="lCosto">Costo</label>
-                            <input type="text" class="form-control" id="tcCosto" required>
+                            <input type="text" class="form-control" id="tcCosto" name="tcCosto" required>
                         </div> 
                         <div>
                             <label for="lPrecio">Precio</label>
-                            <input type="text" class="form-control" id="tcPrecio"  required>
+                            <input type="text" class="form-control" id="tcPrecio" name="tcPrecio"  required>
                         </div> 
                         <div>
                             <label for="formFileMultiple" class="form-label">Imagen</label>
-                            <input class="form-control" type="file" id="fcImagen" multiple required>
+                            <input class="form-control" type="file" id="fcImagen" name="fcImagen" multiple required>
                         </div>     
                     </div>  
                     <div class="espacio"></div>

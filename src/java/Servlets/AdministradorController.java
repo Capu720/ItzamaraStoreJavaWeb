@@ -30,7 +30,9 @@ public class AdministradorController extends HttpServlet {
         ClienteDAO clienteDAO =  new ClienteDAO();
         ProveedorDAO ProveedorDAO = new ProveedorDAO();
         ProductoDAO ProductoDAO = new ProductoDAO();
-        String accion,nombre,paterno,materno,correo,telefono,contra;
+        String accion,nombre,paterno,materno,correo,telefono,contra, descripcion, imagen;
+        int cantidad;
+        double precio, costo;
         RequestDispatcher dispatcher = null;
         
         accion = request.getParameter("accion");
@@ -143,9 +145,59 @@ public class AdministradorController extends HttpServlet {
             int id = Integer.parseInt(request.getParameter("claveProd"));
             Producto producto = ProductoDAO.selProd(id);
             request.setAttribute("produ", producto);
-        
-        
         }
+        
+         else if("actualizarProd".equals(accion)){
+            int clave = Integer.parseInt(request.getParameter("taClave"));
+            nombre = request.getParameter("taNombre");
+            telefono = request.getParameter("taTelefono");
+            cantidad = Integer.parseInt(request.getParameter("taCantidad"));
+            precio = Double.parseDouble(request.getParameter("taPrecio"));
+            costo = Double.parseDouble(request.getParameter("taCosto"));
+            descripcion = request.getParameter("txtaDescripcion");
+            imagen = request.getParameter("faImagen");
+            //int claveProdcto, int cantidad, String nombreProd, String descripcionProd, String marcaProd, String categoriaProd, double costoProd, double precioProd, String imagen
+            Producto producto = new Producto(clave, cantidad, nombre, descripcion, "","", costo, precio, imagen);
+            ProductoDAO.actualizarProducto(producto);
+            
+            dispatcher = request.getRequestDispatcher("productos.jsp");
+            List<Producto> listaProductos = ProductoDAO.listaProdutos();
+            request.setAttribute("lista", listaProductos);
+          
+        }
+         
+         else if("insertaProducto".equals(accion)){
+             
+            int clave = Integer.parseInt(request.getParameter("tcClave"));
+            nombre = request.getParameter("tcNombre");
+            telefono = request.getParameter("tcTelefono");
+            cantidad = Integer.parseInt(request.getParameter("tcCantidad"));
+            precio = Double.parseDouble(request.getParameter("tcPrecio"));
+            costo = Double.parseDouble(request.getParameter("tcCosto"));
+            descripcion = request.getParameter("txtcDescripcion");
+            imagen = request.getParameter("fcImagen");
+            System.out.println("precio:"+precio);
+            //int claveProdcto, int cantidad, String nombreProd, String descripcionProd, String marcaProd, String categoriaProd, double costoProd, double precioProd, String imagen
+            Producto producto = new Producto(clave, cantidad, nombre, descripcion, "","", costo, precio, imagen);
+            ProductoDAO.insertarProducto(producto);
+            
+            dispatcher = request.getRequestDispatcher("productos.jsp");
+            List<Producto> listaProductos = ProductoDAO.listaProdutos();
+            request.setAttribute("lista", listaProductos);
+         
+        }
+         
+         else if("eliminarProducto".equals(accion)){
+             
+            String id = request.getParameter("claveProd");
+            ProductoDAO.eliminarProducto(id);
+            System.out.println("Elimado exitosamente");
+            dispatcher = request.getRequestDispatcher("productos.jsp");
+            List<Producto> listaProductos = ProductoDAO.listaProdutos();
+            request.setAttribute("lista", listaProductos);
+
+         }
+        
         
         
         

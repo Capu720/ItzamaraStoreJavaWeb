@@ -25,7 +25,7 @@
                      <img src="<c:out value="${produ.imagen}"/>" alt="">
                  </div>
                  <div id="campos">
-                     <form class="needs-validation" autocomplete="off" novalidate="" id="idActualizar" method="POST">
+                     <form class="needs-validation" autocomplete="off" novalidate="" id="idActualizar" method="POST" action="AdministradorController?accion=actualizarProd">
                          <div id="FC1-1">
                              <div>
                                  <label for="lClave">Clave</label>
