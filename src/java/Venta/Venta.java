@@ -7,16 +7,25 @@ package Venta;
 public class Venta {
     
     private int claveVta, claveClt;
-    private String fecha, listaProd;
+    private String fecha, listaProd,nombre;
     private double montoTotal, montoPagado;
     
-    public Venta(int claveVta, int claveClt, double montoTotal, double montoPagado, String fecha, String listaProd){
+    public Venta(int claveVta, int claveClt, double montoTotal, double montoPagado, String fecha, String listaProd, String nombre){
         this.claveVta = claveVta;
         this.claveClt = claveClt;
         this.montoTotal = montoTotal;
         this.montoPagado = montoPagado;
         this.fecha = fecha;
         this.listaProd = listaProd;
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public int getClaveVta() {

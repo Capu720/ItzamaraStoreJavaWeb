@@ -22,8 +22,13 @@ import Administracion.Catalogo;
 import Administracion.CatalogoDAO;
 import Administracion.ProductosCatalogo;
 import Venta.Venta;
+import Venta.VentaDAO;
 import Venta.EstadoDeResultados;
 import Mensajes.Mensaje;
+import Venta.Pago;
+import java.util.Date;
+
+
 
 @WebServlet(name = "AdministradorController", urlPatterns = {"/AdministradorController"})
 
@@ -36,9 +41,10 @@ public class AdministradorController extends HttpServlet {
         ProveedorDAO ProveedorDAO = new ProveedorDAO();
         ProductoDAO ProductoDAO = new ProductoDAO();
         CatalogoDAO CatalodoDAO = new CatalogoDAO();
+        VentaDAO VentaDAO = new VentaDAO();
         EstadoDeResultados EstadoDeResultados = new EstadoDeResultados("","",0,0,0);
         String accion,nombre,paterno,materno,correo,telefono,contra, descripcion, imagen;
-        int cantidad, catalogo = 0;
+        int cantidad, catalogo = 0, folio = 0;
         double precio, costo;
         RequestDispatcher dispatcher = null;
         
@@ -280,9 +286,62 @@ public class AdministradorController extends HttpServlet {
         /*TODO LO DE VENTAS*/
         
         else if("verVentas".equals(accion)){
-            dispatcher = request.getRequestDispatcher("ventas.html");
+            
+            dispatcher = request.getRequestDispatcher("verVentas.jsp");
+            List<Venta> listaVentas = VentaDAO.listaVentas();
+            request.setAttribute("lista", listaVentas);
         
         }
+        
+        else if("verVentaCliente".equals(accion)){
+        
+            //Aregando informacion de pagos
+            int id = Integer.parseInt(request.getParameter("claveVenta"));
+            dispatcher = request.getRequestDispatcher("compra-venta.jsp");
+            Venta listaVentas = VentaDAO.ventaCliente(id);
+            request.setAttribute("ventas", listaVentas);
+            
+            //Agregando infomacion de la tabla
+            List<Pago> listaPagos = VentaDAO.ventaPagos(id);
+            request.setAttribute("lista", listaPagos);
+            
+            //Agregando productos que hay en la venta
+            List<Producto> listaProductos = VentaDAO.ventaProductos(id);
+            request.setAttribute("lista1", listaProductos);
+            folio = id;
+        }
+        
+        else if("agregarPago".equals(accion)){
+        
+            int pago = Integer.parseInt(request.getParameter("idCantidad"));
+            int claveVenta = Integer.parseInt(request.getParameter("idVen"));
+            //Generando la fecha
+            java.util.Date fecha = new Date();
+            String fechahoy = ""+fecha.getYear()+"-" + fecha.getMonth() + "-" + fecha.getDay();
+            
+            System.out.println("idVenta:"+claveVenta);
+            //int folio, String fecha, double monto, String numRastreo, int idVenta, int idBanco
+            Pago pago1 = new Pago(0, "2021-06-14", pago, "", claveVenta, 0);
+            
+            //Agrega el pago a la base de datos
+            VentaDAO.pagoEfectivo(pago1);
+            dispatcher = request.getRequestDispatcher("compra-venta.jsp");
+            Venta listaVentas = VentaDAO.ventaCliente(claveVenta);
+            request.setAttribute("ventas", listaVentas);
+            
+            //Agregando infomacion de la tabla
+            List<Pago> listaPagos = VentaDAO.ventaPagos(claveVenta);
+            request.setAttribute("lista", listaPagos);
+            
+            //Agregando productos que hay en la venta
+            List<Producto> listaProductos = VentaDAO.ventaProductos(claveVenta);
+            request.setAttribute("lista1", listaProductos);
+            
+              
+        }
+        
+        
+        
         
         
         

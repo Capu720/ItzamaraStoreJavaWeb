@@ -17,7 +17,7 @@
 </head>
 <body>
     <div class="encabezado">
-        <h1>CATÁLOGO</h1>
+        <h1><a href="AdministradorController?accion=verCatalogos"><img src="assets/Iconos/proximo.svg" class="iconos-tam inline"></a>CATÁLOGO</h1>
     </div>
     
     <div id="verProductos" class="seccion">

@@ -94,7 +94,7 @@ public class EstadoDeResultados {
                 double montoPagado = rs.getDouble("montoPagado");
                 int idUsuario = rs.getInt("Usuario_idUsuario");
                 //double montoTotal, double montoPagado, String fecha
-                Venta venta = new Venta(idVenta, idUsuario, montoTotal, montoPagado, fecha, "");
+                Venta venta = new Venta(idVenta, idUsuario, montoTotal, montoPagado, fecha, "","");
                 lista.add(venta);
             }
             
@@ -145,15 +145,5 @@ public class EstadoDeResultados {
             return null;
         }
         
-        
-        
-        
-    
-    
     }
-    
-    
-    
-    
-    
 }

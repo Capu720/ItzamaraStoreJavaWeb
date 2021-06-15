@@ -13,7 +13,7 @@
     </head>
     <body>
         <div class="encabezado">
-            <h1>Proveedores</h1>
+            <h1><a href="AdministradorController?accion=verProveedores"><img src="assets/Iconos/proximo.svg" class="iconos-tam inline"></a>Proveedores</h1>
         </div>
         
         <div id="actualizaProveedor" class="seccion">

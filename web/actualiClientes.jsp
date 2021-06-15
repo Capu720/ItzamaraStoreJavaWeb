@@ -12,7 +12,7 @@
     </head>
     <body>
         <div class="encabezado">
-            <h1>Clientes</h1>
+            <h1><a href="AdministradorController?accion=verClientes"><img src="assets/Iconos/proximo.svg" class="iconos-tam inline"></a>Clientes</h1>
         </div>
          <form class="needs-validation" autocomplete="off" novalidate="" method="POST" action="AdministradorController?accion=actualizarCliente">
             <div id="FC1">

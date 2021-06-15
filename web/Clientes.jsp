@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="encabezado">
-        <h1>Clientes</h1>
+        <h1><a href="AdministradorController"><img src="assets/Iconos/proximo.svg" class="iconos-tam inline"></a>Clientes</h1>
     </div>
     <div id= "opciones">
         <ul class="dos-apartados">
@@ -60,41 +60,7 @@
         </table>
     </div>
     <div id="actualizar">
-        <!--Formulario de bootstrap-->
-        <form class="needs-validation" autocomplete="off" novalidate="">
-            <div id="FC1">
-                <div>
-                    <label for="lClave">Clave</label>
-                    <input type="text" class="form-control" id="tClave" required="required" readonly="readonly">
-                </div> 
-                <div>
-                    <label for="lNombre">Nombre</label>
-                    <input type="text" class="form-control" id="tNombre"  required>
-                </div> 
-                <div>
-                    <label for="lApPaterno">Apellido Paterno</label>
-                    <input type="text" class="form-control" id="tApPaterno"  required>
-                </div>  
-                <div>
-                    <label for="lApMaterno">Apellido Materno</label>
-                    <input type="text" class="form-control" id="tApMaterno"  required>
-                </div>        
-            </div>
-            <div id="FC2">
-                <div>
-                    <label for="lCorreo">Correo</label>
-                    <input type="email" class="form-control" id="tCorreo"  required>
-                </div>
-                <div>
-                    <label for="lTelefono">Telefono</label>
-                    <input type="number" class="form-control" id="telefono"  required>
-                </div>
-            </div>
-            <div id="FC3">
-                <button type="button" class="btn btn-outline-dark" id="btnRegresar">Regresar</button>
-                <button type="submit" class="btn btn-outline-dark" id="btnActualizar">Actualizar</button>
-            </div>
-        </form> 
+        
     </div>
     <script src="assets/js/val-clientes.js"></script>
 </body>
