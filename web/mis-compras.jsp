@@ -39,7 +39,7 @@
         </div>
         
         <div class="tabla-carritos">
-            <table class="table table-hover" id="tVentas" name="tVentas">
+            <table class="table table-hover" id="tCompras" name="tCompras">
                 <thead>
                     <tr>
                         <th>Folio</th>
@@ -54,14 +54,14 @@
                     <td>2021-06-12</td>
                     <td>$diepeso</td>
                     <td>$cincopeso</td>
-                    <td><a href="carrito.jsp"><img class="iconoCarrito" src="assets/Iconos/visibilidad.svg" alt=""></a></td>
+                    <td><a href="compraCliente.html"><img class="iconoCarrito" src="assets/Iconos/visibilidad.svg" alt=""></a></td>
                 </tr>
                 <tr>
                     <td>120504</td>
                     <td>2021-06-12</td>
                     <td>$diepeso</td>
                     <td>$cincopeso</td>
-                    <td><a href="carrito.jsp"><img class="iconoCarrito" src="assets/Iconos/visibilidad.svg" alt=""></a></td>
+                    <td><a href="compraCliente.html"><img class="iconoCarrito" src="assets/Iconos/visibilidad.svg" alt=""></a></td>
                 </tr>
             </table>
         </div>

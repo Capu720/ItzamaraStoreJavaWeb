@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/styles-2.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="encabezado">
+        <h1><a href="mis-compras.jsp"><img src="assets/Iconos/proximo.svg" class="iconos-tam inline"></a>Compra</h1>
+    </div>
+    <div class="seccion-montos">
+        <div id="cantidades">
+            <div>
+                <p class="inline n">Monto Total: </p><p class="inline n" id="MT">$500</p>
+            </div>
+            <div>
+                <p class="inline n">Monto Pagado: </p><p class="inline n" id="MP">$200</p>
+            </div>
+            <div>
+                <p class="inline n">Productos entregados: </p><p class="inline n" id="MP">No</p>
+            </div>
+            <br>
+        </div>
+        
+        <div class="wrapper">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <p class="tamL pink">Productos vendidos</p>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img src="assets/img/Productos/aretes_caras.jpg" class="d-block w-100 tamImg " alt="...">
+                    <p class="prTitulo">Aretes de caras</p>
+                    <p>Aretes de oro con piedras color amatista</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/Productos/anillo_rosa.jpg" class="d-block w-100 tamImg" alt="...">
+                    <p class="prTitulo">Anillo rosa</p>
+                    <p>Anillo rosa de oro</p>
+                </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="info">
+                <p class="tamL pink">Pagos</p>
+                <br>
+                <table class="table table-hover" id="tVentas">
+                    <thead>
+                        <tr>
+                            <th>Folio</th>
+                            <th>Fecha</th>
+                            <th>Monto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1235</td>
+                            <td>19/Abril/2021</td>
+                            <td>$150</td>
+                        </tr>  
+                        <tr>
+                            <td>1236</td>
+                            <td>30/Abril/2021</td>
+                            <td>$50</td>
+                        </tr>  
+                    </tbody>
+                </table>
+                <br>
+                <p class="tamL pink">Transferencia bancaria</p>
+                <form class="needs-validation" autocomplete="off" novalidate="" id="idPago">
+                    <div class="pagoTrans">
+                        <button type="button" onclick="window.location.href='pago-transferencia.jsp';" class="btn btn-outline-dark" id="btnRegistrar">Registrar</button>
+                    </div>
+                </form>
+                <script src="assets/js/validacion.js"></script>
+            </div>
+        </div>    
+    </div>
+</body>
+</html>
