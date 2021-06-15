@@ -17,7 +17,7 @@
 
 <body class="body-form">
     <div class="nav-titulo-pagina-principal">
-        <a class="a-pagina-inicio" href="index.html"><strong>IZ</strong></a>
+        <a class="a-pagina-inicio" href="mis-compras.jsp"><strong>IZ</strong></a>
     </div>
     <div>
         <h1 class="h1-titulo">Registro de pago por transferencia</h1>
