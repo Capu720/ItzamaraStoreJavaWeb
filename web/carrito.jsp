@@ -51,16 +51,9 @@
                 </thead>
                 <tr>
                     <td><img class="imagenCarrito" src="assets/img/Productos/bbCream.jpg" alt="prod"></td>
-                    <td>Cremita pa la piel</td>
+                    <td>Cremita para la piel</td>
                     <td>2</td>
-                    <td>$cincopeso</td>
-                    <td><a href="carrito.jsp"><img class="iconoCarrito" src="assets/Iconos/menos.svg" alt=""></a></td>
-                </tr>
-                <tr>
-                    <td><img class="imagenCarrito" src="assets/img/Productos/bbCream.jpg" alt="prod"></td>
-                    <td>Cremita pa la piel</td>
-                    <td>2</td>
-                    <td>$cincopeso</td>
+                    <td>$ 5.00</td>
                     <td><a href="carrito.jsp"><img class="iconoCarrito" src="assets/Iconos/menos.svg" alt=""></a></td>
                 </tr>
             </table>

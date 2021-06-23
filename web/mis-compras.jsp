@@ -52,15 +52,15 @@
                 <tr>
                     <td>120504</td>
                     <td>2021-06-12</td>
-                    <td>$diepeso</td>
-                    <td>$cincopeso</td>
+                    <td>$ 10.00</td>
+                    <td>$ 5.00</td>
                     <td><a href="compraCliente.html"><img class="iconoCarrito" src="assets/Iconos/visibilidad.svg" alt=""></a></td>
                 </tr>
                 <tr>
-                    <td>120504</td>
+                    <td>120503</td>
                     <td>2021-06-12</td>
-                    <td>$diepeso</td>
-                    <td>$cincopeso</td>
+                    <td>$ 10.00</td>
+                    <td>$ 10.00</td>
                     <td><a href="compraCliente.html"><img class="iconoCarrito" src="assets/Iconos/visibilidad.svg" alt=""></a></td>
                 </tr>
             </table>
